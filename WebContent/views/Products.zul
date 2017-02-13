@@ -1,0 +1,28 @@
+<window border="normal" width="800px" height="500px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ProductsController">
+    <caption label="Products" image="resources/icons/product.png"/>
+    <panel width="100%" height="100%">
+        <panelchildren>
+            <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                <toolbar height="21px">
+                    <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refresh();"/>
+                </toolbar>
+                <toolbar align="end" height="21px">
+                    <image src="resources/icons/browse.png"/>
+                    <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                </toolbar>
+            </hbox>
+            <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;" onDoubleClick="spaceOwner.productSelected();">
+                <listhead>
+                    <listheader label="Product ID" width="80px"/>
+                    <listheader label="Year" width="50px"/>
+                    <listheader label="Name" width="300px"/>
+                    <listheader label="Starting Date" width="100px"/>
+                    <listheader label="Effective Date" width="100px"/>
+                    <listheader label="Mature Date" width="100px"/>
+                    <listheader label="Added Date" width="100px"/>
+                </listhead>
+            </listbox>
+            <paging id="pg" pageSize="50"/>
+        </panelchildren>
+    </panel>
+</window>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="imctools">
+
+    <property name="external.lib.path" value="/home/data/workspace/libraries/java"/>
+    <property name="webapps.dir" value="D:/Tomcat 8.0/webapps"/>
+    <property name="temp.dir" value="D:/data/temp"/>
+    <property name="war.name" value="IMCTools"/>
+
+    <path id="compile.classpath">
+        <fileset dir="WebContent/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <mkdir dir="WebContent/WEB-INF/lib"/>
+        <mkdir dir="WebContent/resources"/>
+        <mkdir dir="WebContent/views"/>
+    </target>
+
+    <target name="copy-lib">
+        <copy todir="WebContent/WEB-INF/lib" flatten="true">
+            <fileset dir="${external.lib.path}/apache/digester/" includes="*"/>
+            <fileset dir="${external.lib.path}/apache/poi/" includes="*"/>
+            <fileset dir="${external.lib.path}/apache/poi/ooxml/" includes="*"/>
+            <fileset dir="${external.lib.path}/zk/" includes="*"/>
+            <fileset dir="${external.lib.path}/hibernate/" includes="*.*"/>
+            <fileset dir="${external.lib.path}/slf4j-log4j/" includes="*.*"/>
+            <fileset dir="${external.lib.path}/jasperreports/" includes="*.*"/>
+        </copy>
+        <copy file="${external.lib.path}/jdbc/mssql/jtds-1.2.7.jar" tofile="WebContent/WEB-INF/lib/jtds-1.2.7.jar" overwrite="true"/>
+        <copy file="${external.lib.path}/jdbc/db2/jtopen_7_10_jdbc40_jdk6/lib/jt400.jar" tofile="WebContent/WEB-INF/lib/jt400.jar" overwrite="true"/>
+        <copy file="/home/data/workspace/projects/IMC/Library/out/artifacts/Library_jar/Library.jar" tofile="WebContent/WEB-INF/lib/Library.jar" overwrite="true"/>
+    </target>
+
+    <target name="compile" depends="init" >
+        <javac destdir="build/classes" debug="true" srcdir="src">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+	
+	<!--<target name="compile" depends="modules, main, jar" description="compile all" /> -->
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="copy-views">
+        <delete dir="${webapps.dir}/${war.name}/resources"/>
+        <delete dir="${webapps.dir}/${war.name}/views"/>
+        <delete dir="${webapps.dir}/${war.name}/reports"/>
+        <copy todir="${webapps.dir}/${war.name}/views" overwrite="true">
+            <fileset dir="WebContent/views" includes="**/*.*"/>
+        </copy>
+        <copy todir="${webapps.dir}/${war.name}/resources" overwrite="true">
+            <fileset dir="WebContent/resources" includes="**/*.*"/>
+        </copy>
+        <copy file="WebContent/index.zul" tofile="${webapps.dir}/${war.name}/index.zul" overwrite="true"/>
+        <copy file="WebContent/main.zul" tofile="${webapps.dir}/${war.name}/main.zul" overwrite="true"/>
+    </target>
+
+    <target name="war" depends="compile">
+        <copy file="src/log4j.xml" tofile="build/classes/log4j.xml" overwrite="true"/>
+        <war destfile="${temp.dir}/${war.name}.war" webxml="WebContent/WEB-INF/web.xml">
+            <fileset dir="WebContent"/>
+            <lib dir="WebContent/WEB-INF/lib"/>
+            <classes dir="build/classes"/>
+        </war>
+        <copy file="${temp.dir}/${war.name}.war" tofile="${webapps.dir}/${war.name}.war" overwrite="true"/>
+    </target>
+
+</project>

@@ -1,0 +1,139 @@
+/**
+    tiCustomReports
+    Talisman - Claim History
+    Status: Production
+*/
+
+import com.imc.imctools.tools.Libs;
+import java.util.*;
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Session;
+import java.text.SimpleDateFormat;
+
+String[] columns = new String[] {
+        "Personnel Number", "Info Type", "Start Date", "End Date", "Wage Type", "Payment Amount", "Number", "Unit", "Notes", "Cheque No"};
+
+String qry = "select "
+		+ "c.hempmemo3 as personnel_number, "
+		+ "convert(datetime,convert(varchar,d.hdt2sdtdd)+'-'+convert(varchar,d.hdt2sdtmm)+'-'+convert(varchar,d.hdt2sdtyy), 105) as sdt, "
+		+ "convert(datetime,convert(varchar,d.hdt2mdtdd)+'-'+convert(varchar,d.hdt2mdtmm)+'-'+convert(varchar,d.hdt2mdtyy), 105) as mdt, "
+        + "( "
+        + "a.hclmaamt1 + a.hclmaamt2 + a.hclmaamt3 + a.hclmaamt4 + a.hclmaamt5 + a.hclmaamt6 + a.hclmaamt7 + a.hclmaamt8 + a.hclmaamt9 + a.hclmaamt10 + "
+        + "a.hclmaamt11 + a.hclmaamt12 + a.hclmaamt13 + a.hclmaamt14 + a.hclmaamt15 + a.hclmaamt16 + a.hclmaamt17 + a.hclmaamt18 + a.hclmaamt19 + a.hclmaamt20 + "
+        + "a.hclmaamt21 + a.hclmaamt22 + a.hclmaamt23 + a.hclmaamt24 + a.hclmaamt25 + a.hclmaamt26 + a.hclmaamt27 + a.hclmaamt28 + a.hclmaamt29 + a.hclmaamt30 "
+        + ") as approved, "
+		+ "a.hclmseqno, "
+		+ "e.HOVCCQNO "
+        + "from idnhltpf.dbo.hltclm a "
+        + "inner join idnhltpf.dbo.hltdt1 b "
+        + "on a.hclmyy=b.hdt1yy "
+        + "and a.hclmbr=b.hdt1br "
+        + "and a.hclmdist=b.hdt1dist "
+        + "and a.hclmpono=b.hdt1pono "
+        + "and a.hclmidxno=b.hdt1idxno "
+        + "and a.hclmseqno=b.hdt1seqno "
+        + "inner join idnhltpf.dbo.hltemp c "
+        + "on a.hclmyy=c.hempyy "
+        + "and a.hclmbr=c.hempbr "
+        + "and a.hclmdist=c.hempdist "
+        + "and a.hclmpono=c.hemppono "
+        + "and a.hclmidxno=c.hempidxno "
+        + "and a.hclmseqno=c.hempseqno "
+		+ "inner join idnhltpf.dbo.hltdt2 d "
+        + "on a.hclmyy=d.hdt2yy "
+        + "and a.hclmbr=d.hdt2br "
+        + "and a.hclmdist=d.hdt2dist "
+        + "and a.hclmpono=d.hdt2pono "
+        + "and a.hclmidxno=d.hdt2idxno "
+        + "and a.hclmseqno=d.hdt2seqno "
+		+ "and d.hdt2ctr=0 "
+		+ "inner join IDNHLTPF.dbo.hltovc e "
+		+ "on a.HCLMYY = e.HOVCYY "
+		+ "and a.HCLMBR = e.HOVCBR "
+		+ "and a.HCLMDIST = e.HOVCDIST "
+		+ "and a.HCLMPONO = e.HOVCPONO "
+		+ "and a.HCLMIDXNO = e.HOVCIDXNO "
+		+ "and a.HCLMSEQNO = e.HOVCSEQNO "
+        + "where b.hdt1ctr=0 "
+        + "and a.hclmidxno<>99999 "
+        + "and a.hclmrecid<>'c' "
+        + "and a.hclmyy=" + productPOJO.getProductYear() + " "
+        + "and a.hclmpono=" + productPOJO.getProductId() + " ";
+
+if (period.equals("Date Range")) {
+    qry += "and convert(date, convert(varchar, a.HCLMCDATEY) + '-' + convert(varchar, a.HCLMCDATEM) + '-' + convert(varchar, a.HCLMCDATED)) "
+            + "between "
+            + "'" + new SimpleDateFormat("yyyy-MM-dd").format(dStartDate.getValue()) + "' and '" + new SimpleDateFormat("yyyy-MM-dd").format(dEndDate.getValue()) + "' ";
+}
+
+if (period.equals("Month Range")) {
+    Calendar calLast = Calendar.getInstance();
+    calLast.set(spnEndMonthYear.getValue(), cbEndMonth.getSelectedIndex(), 1);
+
+    qry += "and convert(date, convert(varchar, a.HCLMCDATEY) + '-' + convert(varchar, a.HCLMCDATEM) + '-' + convert(varchar, a.HCLMCDATED)) "
+            + "between "
+            + "'" + spnStartMonthYear.getValue() + "-" + (cbStartMonth.getSelectedIndex()+1) + "-1' and '" + spnEndMonthYear.getValue() + "-" + (cbEndMonth.getSelectedIndex()+1) + "-" + calLast.getActualMaximum(Calendar.DAY_OF_MONTH) + "' ";
+}
+
+if (period.equals("Year Range")) {
+    qry += "and a.HCLMCDATEY between " + spnStartYear.getValue() + " and " + spnEndYear.getValue() + " ";
+}
+
+Session s = Libs.sfDB.openSession();
+try {
+    List l = s.createSQLQuery(qry).list();
+
+    Workbook wb = new HSSFWorkbook();
+    Sheet sheet = wb.createSheet("Claim History");
+    sheet.createFreezePane(0, 1, 0, 1);
+    int cnt = 0;
+
+    org.apache.poi.ss.usermodel.Row row = sheet.createRow(cnt);
+
+    for (int i=0; i<columns.length; i++) {
+        Libs.createCell(row, i, columns[i]);
+    }
+
+    cnt++;
+
+    for (Object[] o : l) {
+        row = sheet.createRow(cnt);
+
+		String notes = "";
+		if (Libs.nn(o[4]).equals("A")) notes = "EmployeeFR13R12031";
+		if (Libs.nn(o[4]).equals("B")) notes = "SpouseFR13R12031";
+		if (Libs.nn(o[4]).equals("C")) notes = "SpouseFR13R12031";
+		if ("D,E,F".contains(Libs.nn(o[4]))) notes = "Dependent ChildFR13R12031";
+		
+		Libs.createCell(row, 0, Libs.nn(o[0]).trim());	/** Personnel Number */
+		Libs.createCell(row, 1, "15");	/** Info Type */
+		Libs.createCell(row, 2, new SimpleDateFormat("dd.MM.yyyy").format((Date) o[1]));	/** Start Date */
+		Libs.createCell(row, 3, new SimpleDateFormat("dd.MM.yyyy").format((Date) o[2]));	/** End Date */
+		Libs.createCell(row, 4, "9101");	/** Wage Type */
+		Cell cell = Libs.createCell(row, 5, Double.valueOf(Libs.nn(o[3])));	/** Payment Amount */
+		Libs.createCell(row, 6, "");	/** Number */
+		Libs.createCell(row, 7, "");	/** Unit */
+		Libs.createCell(row, 8, notes);	/** Notes */
+		Libs.createCell(row, 9, Libs.nn(o[5]).trim());	/** Cheque No */
+
+		CellStyle cs = cell.getCellStyle();
+		cs.setDataFormat((short) 4);
+		cell.setCellStyle(cs);
+		
+        cnt++;
+    }
+
+    FileOutputStream out = new FileOutputStream(reportPOJO.getFile());
+    wb.write(out);
+    out.close();
+    reportPOJO.setName(productPOJO.getProductYear() + "-" + productPOJO.getProductId() + "-Claim History-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xls");
+} catch (Exception ex) {
+    log.error("custom_reports_talisman_claim_history.reportgenerator", ex);
+} finally {
+    if (s!=null && s.isOpen()) s.close();
+}

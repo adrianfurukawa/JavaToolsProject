@@ -1,0 +1,146 @@
+<window border="normal" width="800px" height="400px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ReportGeneratorController">
+    <caption label="Report Generator" image="resources/icons/printer.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/printer.png" tooltiptext="Generate" onClick="spaceOwner.generate();"/>
+        </toolbar>
+        <panelchildren>
+            <borderlayout width="100%" height="100%">
+                <west size="500px" splittable="true" style="border-top:0px; border-right:0px; border-bottom:0px;">
+                    <grid width="100%" height="100%">
+                        <columns visible="false">
+                            <column width="120px"/>
+                            <column/>
+                        </columns>
+                        <rows>
+                            <row>
+                                Client
+                                <bandbox id="bbClient" hflex="true" readonly="true">
+                                    <bandpopup width="500px" height="250px">
+                                        <panel width="100%" height="100%">
+                                            <panelchildren>
+                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                    <toolbar height="21px">
+                                                        <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.clientSelected();"/>
+                                                    </toolbar>
+                                                    <toolbar align="end" height="21px">
+                                                        <image src="resources/icons/browse.png"/>
+                                                        <textbox id="tQuickSearchClients" onOK="spaceOwner.quickSearchClients();"/>
+                                                    </toolbar>
+                                                </hbox>
+                                                <listbox id="lbClients" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.clientSelected();">
+                                                    <listhead sizable="true">
+                                                        <listheader label="Client ID" width="80px"/>
+                                                        <listheader label="Name"/>
+                                                        <listheader label="Type" width="120px"/>
+                                                    </listhead>
+                                                </listbox>
+                                                <paging id="pgClients" pageSize="20"/>
+                                            </panelchildren>
+                                        </panel>
+                                    </bandpopup>
+                                </bandbox>
+                            </row>
+                            <row>
+                                Product
+                                <bandbox id="bbProduct" hflex="true" readonly="true">
+                                    <bandpopup width="500px" height="250px">
+                                        <panel width="100%" height="100%">
+                                            <panelchildren>
+                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                    <toolbar height="21px">
+                                                        <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.productSelected();"/>
+                                                    </toolbar>
+                                                    <toolbar align="end" height="21px">
+                                                        <image src="resources/icons/browse.png"/>
+                                                        <textbox id="tQuickSearchProducts" onOK="spaceOwner.quickSearchProducts();"/>
+                                                    </toolbar>
+                                                </hbox>
+                                                <listbox id="lbProducts" width="100%" height="100%" checkmark="true" multiple="true" vflex="true" style="white-space:nowrap; border-top:0px;" onDoubleClick="spaceOwner.productSelected();">
+                                                    <listhead sizable="true">
+                                                        <listheader label="Year" width="70px"/>
+                                                        <listheader label="Product Number" width="110px"/>
+                                                        <listheader label="Name"/>
+                                                    </listhead>
+                                                </listbox>
+                                            </panelchildren>
+                                        </panel>
+                                    </bandpopup>
+                                </bandbox>
+                            </row>
+                            <row>
+                                Period
+                                <combobox id="cbPeriod" readonly="true">
+                                    <attribute name="onCreate">
+                                        self.setSelectedIndex(0);
+                                    </attribute>
+                                    <comboitem label="Date Range"/>
+                                    <comboitem label="Month Range"/>
+                                    <comboitem label="Year Range"/>
+                                </combobox>
+                            </row>
+                            <row id="rowDateRange">
+                                <label value="Date Range"/>
+                                <hlayout>
+                                    <datebox id="dStartDate" format="yyyy-MM-dd" width="100px"/>
+                                    to
+                                    <datebox id="dEndDate" format="yyyy-MM-dd" width="100px"/>
+                                </hlayout>
+                            </row>
+                            <row id="rowMonthRange" visible="false">
+                                <label value="Month Range"/>
+                                <hlayout>
+                                    <combobox id="cbStartMonth" width="100px"/>
+                                    <spinner id="spnStartMonthYear" width="60px"/>
+                                    to
+                                    <combobox id="cbEndMonth" width="100px"/>
+                                    <spinner id="spnEndMonthYear" width="60px"/>
+                                </hlayout>
+                            </row>
+                            <row id="rowYearRange" visible="false">
+                                <label value="Year Range"/>
+                                <hlayout>
+                                    <spinner id="spnStartYear" width="60px"/>
+                                    to
+                                    <spinner id="spnEndYear" width="60px"/>
+                                </hlayout>
+                            </row>
+                            <row>
+                                Type
+                                <combobox id="cbReportType" readonly="true" width="80px">
+                                    <attribute name="onCreate">
+                                        self.setSelectedIndex(1);
+                                    </attribute>
+                                    <comboitem label="PDF"/>
+                                    <comboitem label="XLS"/>
+                                    <comboitem label="CSV"/>
+                                </combobox>
+                            </row>
+                        </rows>
+                    </grid>
+                </west>
+                <center style="border-top:0px; border-right:0px; border-bottom:0px;">
+                    <tree id="tree" width="100%" checkmark="true" multiple="true" height="100%" vflex="true">
+                        <treechildren>
+                            <treeitem id="tiMembers" label="Members" open="false"/>
+                            <treeitem id="tiClaimHistory" label="Claim History" open="false">
+                                <treechildren>
+                                    <treeitem id="tiExcess" label="Excess" open="false"/>
+                                </treechildren>
+                            </treeitem>
+                            <treeitem id="tiEDCClaimHistory" label="Claim History" open="false"/>
+                            <treeitem id="tiPaymentRecapitulation" label="Payment Recapitulation" open="false">
+                                <treechildren>
+                                    <treeitem id="tiPaymentRecapitulationProvider" label="Provider" open="false"/>
+                                    <treeitem id="tiPaymentRecapitulationNonProvider" label="Non-Provider" open="false"/>
+                                </treechildren>
+                            </treeitem>
+                            <treeitem id="tiCustomReports" label="Custom Reports" open="false"/>
+                            <treeitem id="tiProviders" label="Providers" open="false"/>
+                        </treechildren>
+                    </tree>
+                </center>
+            </borderlayout>
+        </panelchildren>
+    </panel>
+</window>

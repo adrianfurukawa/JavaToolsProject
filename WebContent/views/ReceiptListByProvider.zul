@@ -1,0 +1,61 @@
+<window border="normal" width="500px" height="170px" position="center" closable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ReceiptListByProvider">
+    <caption label="Receipt List by Provider"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Export" onClick="spaceOwner.export();"/>
+        </toolbar>
+        <panelchildren>
+            <grid width="100%" height="100%">
+                <columns visible="false">
+                    <column width="150px"/>
+                    <column/>
+                </columns>
+                <rows>
+                    <row>
+                        Provider Name
+                        <bandbox id="bbProviderName" hflex="true" readonly="true" onOpen="spaceOwner.bbProviderNameOpen(event);">
+                            <bandpopup width="500px" height="250px">
+                                <panel width="100%" height="100%">
+                                    <panelchildren>
+                                        <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                            <toolbar height="21px">
+                                                <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refresh();"/>
+                                            </toolbar>
+                                            <toolbar align="end" height="21px">
+                                                <image src="resources/icons/browse.png"/>
+                                                <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                                            </toolbar>
+                                        </hbox>
+                                        <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.lbSelected();">
+                                            <listhead>
+                                                <listheader label="Provider Code" width="100px"/>
+                                                <listheader label="Name"/>
+                                            </listhead>
+                                        </listbox>
+                                        <paging id="pg" pageSize="20"/>
+                                    </panelchildren>
+                                </panel>
+                            </bandpopup>
+                        </bandbox>
+                    </row>
+                    <row>
+                        Scope
+                        <combobox id="cbScope" readonly="true">
+                            <comboitem label="All"/>
+                            <comboitem label="Outstanding"/>
+                            <comboitem label="Unpaid"/>
+                            <comboitem label="Paid"/>
+                        </combobox>
+                    </row>
+                    <row>
+                        Date Period
+                        <hlayout>
+                            <datebox id="dStartDate" format="yyyy-MM-dd"/>-
+                            <datebox id="dEndDate" format="yyyy-MM-dd"/>
+                        </hlayout>
+                    </row>
+                </rows>
+            </grid>
+        </panelchildren>
+    </panel>
+</window>

@@ -1,0 +1,32 @@
+<window border="normal" width="900px" height="520px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ProvidersController">
+    <caption label="Providers" image="resources/icons/provider.png"/>
+    <panel width="100%" height="100%">
+        <panelchildren>
+            <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                <toolbar height="21px">
+                    <toolbarbutton image="resources/icons/new.png" tooltiptext="New" onClick="spaceOwner.newProvider();"/>
+                    <toolbarbutton id="tbnEdit" image="resources/icons/edit.png" tooltiptext="Edit" disabled="true" onClick="spaceOwner.edit();"/>
+                    <!--<toolbarbutton id="tbnDelete" image="resources/icons/delete.png" tooltiptext="Delete" disabled="true" onClick="spaceOwner.delete();"/>-->
+                    <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refresh();"/>
+                </toolbar>
+                <toolbar align="end" height="21px">
+                    <image src="resources/icons/browse.png"/>
+                    <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                </toolbar>
+            </hbox>
+            <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px" onSelect="spaceOwner.providerSelected();" onDoubleClick="spaceOwner.providerDoubleClicked();">
+                <listhead sizable="true">
+                    <listheader label="Provider Code" width="100px"/>
+                    <listheader label="Name" width="200px"/>
+                    <listheader label="EDC" width="50px"/>
+                    <listheader label="Address" width="300px"/>
+                    <listheader label="City" width="100px"/>
+                    <listheader label="Zip Code" width="80px"/>
+                    <listheader label="Province" width="100px"/>
+                    <listheader label="Phone Number" width="100px"/>
+                </listhead>
+            </listbox>
+            <paging id="pg" pageSize="50"/>
+        </panelchildren>
+    </panel>
+</window>

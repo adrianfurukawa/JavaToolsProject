@@ -1,0 +1,88 @@
+<window border="normal" width="500px" height="420px" position="center" closable="true" sizable="true" contentStyle="padding:5px;" use="com.imc.imctools.controllers.EDCDetailController">
+    <caption label="EDC Detail"/>
+    <tabbox width="100%" height="100%">
+        <tabs>
+            <tab label="Information"/>
+            <tab label="Claim History"/>
+            <tab label="Deployment History"/>
+        </tabs>
+        <tabpanels>
+            <tabpanel style="padding:0px;">
+                <menubar style="border-top:0px;">
+                    <menu label="Action" image="resources/icons/action.png">
+                        <menupopup>
+                            <menuitem label="Deploy" onClick="spaceOwner.deploy();"/>
+                            <menuseparator/>
+                            <menuitem label="Withdraw" onClick="spaceOwner.withdraw();"/>
+                        </menupopup>
+                    </menu>
+                </menubar>
+                <panel style="padding:5px;">
+                    <panelchildren>
+                        <groupbox title="Information" closable="false">
+                            <grid width="100%" height="100%" style="border:0px;">
+                                <columns visible="false">
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        TID
+                                        <cell colspan="3">
+                                            <label id="lTID"/>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Serial Number
+                                        <cell colspan="3">
+                                            <label id="lSN"/>
+                                        </cell>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                        <groupbox title="Current Deployment" closable="false">
+                            <grid width="100%" height="100%" style="border:0px;">
+                                <columns visible="false">
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        Provider
+                                        <cell colspan="3">
+                                            <label id="lProvider"/>
+                                        </cell>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                    </panelchildren>
+                </panel>
+            </tabpanel>
+            <tabpanel style="padding:0px;">
+                <listbox id="lbClaimHistory" width="100%" height="100%" vflex="true" style="white-space:nowrap; border:0px;">
+                    <listhead sizable="true">
+                        <listheader label="Trans. Number" width="120px"/>
+                        <listheader label="Date" width="100px"/>
+                        <listheader label="Provider"/>
+                    </listhead>
+                </listbox>
+                <paging id="pgClaimHistory" pageSize="20"/>
+            </tabpanel>
+            <tabpanel style="padding:0px;">
+                <listbox id="lbDeploymentHistory" width="100%" height="100%" vflex="true" style="white-space:nowrap; border:0px;">
+                    <listhead sizable="true">
+                        <listheader label="Provider"/>
+                        <listheader label="Usage" width="80px"/>
+                    </listhead>
+                </listbox>
+                <paging id="pgDeploymentHistory" pageSize="20"/>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+</window>

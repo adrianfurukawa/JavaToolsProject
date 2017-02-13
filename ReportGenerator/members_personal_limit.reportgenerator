@@ -1,0 +1,79 @@
+/**
+    tiMembers
+    Members Personal Limit
+    Status: Production
+*/
+
+import com.imc.imctools.tools.Libs;
+import java.util.*;
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Session;
+import java.text.SimpleDateFormat;
+import java.math.BigDecimal;
+
+String[] columns = new String[] {
+	"YEAR",
+	"POLICY NUMBER",
+	"INDEX",
+	"SEQUENCE",
+	"NAME",
+	"PLAN",
+	"AMOUNT"
+};
+
+String qry = "select "
+		+ "a.hgajiyy, a.hgajipono, "
+		+ "a.hgajiidxno, a.hgajiseqno, "
+		+ "b.hdt1name, "
+		+ "a.hgajiid, a.hgajilmt "
+		+ "from idnhltpf.dbo.hltgajisuh a "
+		+ "inner join idnhltpf.dbo.hltdt1 b on b.hdt1yy=a.hgajiyy and b.hdt1pono=a.hgajipono and b.hdt1idxno=a.hgajiidxno and b.hdt1seqno=a.hgajiseqno and b.hdt1ctr=0 "
+        + "where "
+        + "b.hdt1idxno not in (99998, 99999) "
+        + "and a.hgajiyy=" + productPOJO.getProductYear() + " "
+        + "and a.hgajipono=" + productPOJO.getProductId() + " "
+		+ "order by a.hgajiidxno asc, a.hgajiid asc ";
+
+Session s = Libs.sfDB.openSession();
+try {
+    List l = s.createSQLQuery(qry).list();
+
+    Workbook wb = new HSSFWorkbook();
+    Sheet sheet = wb.createSheet("Members Personal Limit");
+    sheet.createFreezePane(0, 1, 0, 1);
+    int cnt = 0;
+
+    org.apache.poi.ss.usermodel.Row row = sheet.createRow(cnt);
+
+    for (int i=0; i<columns.length; i++) {
+        Libs.createCell(row, i, columns[i]);
+    }
+
+    cnt++;
+
+    for (Object[] o : l) {
+        row = sheet.createRow(cnt);
+
+        for (int i=0; i<o.length; i++) {
+			if (i==6) {
+				Libs.createCell(row, i, ((BigDecimal) o[i]).doubleValue());
+			} else {
+				Libs.createCell(row, i, o[i]);
+			}
+        }
+
+        cnt++;
+    }
+
+    FileOutputStream out = new FileOutputStream(reportPOJO.getFile());
+    wb.write(out);
+    out.close();
+    reportPOJO.setName(productPOJO.getProductYear() + "-" + productPOJO.getProductId() + "-Members Personal Limit-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xls");
+} catch (Exception ex) {
+    log.error("members_personal_limit.reportgenerator", ex);
+} finally {
+    if (s!=null && s.isOpen()) s.close();
+}

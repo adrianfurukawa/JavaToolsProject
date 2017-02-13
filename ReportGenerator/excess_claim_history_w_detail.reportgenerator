@@ -1,0 +1,189 @@
+/**
+    tiExcess
+    Excess Claim History with Detail
+    Status: Production
+*/
+
+import com.imc.imctools.tools.Libs;
+import java.util.*;
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Session;
+import java.text.SimpleDateFormat;
+
+String getRJCode(String rjCode) {
+	String result = "";
+	Session s = Libs.sfDB.openSession();
+	try {
+		String q = "select name "
+			+ "from idnhltpf.dbo.ms_rejdelaycode "
+			+ "where "
+			+ "id='" + rjCode + "' ";
+		
+		result = Libs.nn(s.createSQLQuery(q).uniqueResult());
+	} catch (Exception ex) {
+		log.error("claim_history_w_detail.reportgenerator", ex);
+	} finally {
+		s.close();
+	}
+	return result;
+}
+
+String[] columns = new String[] {
+        "POLICY YEAR", "BR", "DIST", "POLICY NUMBER", "COMPANY NAME", "INDEX", "SEQ", "CARD NUMBER",
+        "NAME", "COUNT", "TYPE", "CLAIM-YEAR", "CLAIM-MONTH", "CLAIM-DAY", "SIN-YEAR", "SIN-MONTH",
+        "SIN-DAY", "SOUT-YEAR", "SOUT-MONTH", "SOUT-DAY", "RECEIPT-YEAR", "RECEIPT-MONTH",
+        "RECEIPT-DAY", "PAYMENT-YEAR", "PAYMENT-MONTH", "PAYMENT-DAY", "HID NUMBER", "PROVIDER NAME",
+        "ICD1", "ICD2", "ICD3", "PROPOSED", "APPROVED", "STATUS", "MEMO", "SEX" };
+
+String qry = "select "
+        + "a.HCLMYY as POLICY_YEAR, a.HCLMBR as BR, a.HCLMDIST as DIST, a.HCLMPONO as POLICY_NUMBER, c.HHDRNAME as COMPANY_NAME, "
+        + "b.HDT1IDXNO as 'INDEX', b.HDT1SEQNO as SEQ, b.HDT1NCARD as CARD_NUMBER, b.HDT1NAME as 'NAME', "
+        + "a.HCLMCOUNT as 'COUNT', a.HCLMTCLAIM as 'TYPE', "
+        + "a.HCLMCDATEY as 'CLAIM_YEAR', a.HCLMCDATEM as 'CLAIM_MONTH', HCLMCDATED as 'CLAIM_DAY', "
+        + "a.HCLMSINYY as 'SIN_YEAR', a.HCLMSINMM as 'SIN_MONTH', HCLMSINDD as 'SIN_DAY', "
+        + "a.HCLMSOUTYY as 'SOUT_YEAR', a.HCLMSOUTMM as 'SOUT_MONTH', HCLMSOUTDD as 'SOUT_DAY', "
+        + "a.HCLMRDATEY as 'RECEIPT_YEAR', a.HCLMRDATEM as 'RECEIPT_MONTH', HCLMRDATED as 'RECEIPT_DAY', "
+        + "a.HCLMPDATEY as 'PAYMENT_YEAR', a.HCLMPDATEM as 'PAYMENT_MONTH', HCLMPDATED as 'PAYMENT_DAY', "
+        + "a.HCLMCNO as 'HID_NUMBER', "
+        + "e.HPRONAME as 'PROVIDER_NAME', "
+        + "a.HCLMDISCD1 as ICD1, a.HCLMDISCD2 as ICD2, a.HCLMDISCD3 as ICD3, "
+        + "( "
+        + "a.HCLMCAMT1 + a.HCLMCAMT2 + a.HCLMCAMT3 + a.HCLMCAMT4 + a.HCLMCAMT5 + a.HCLMCAMT6 + a.HCLMCAMT7 + a.HCLMCAMT8 + a.HCLMCAMT9 + a.HCLMCAMT10 + "
+        + "a.HCLMCAMT11 + a.HCLMCAMT12 + a.HCLMCAMT13 + a.HCLMCAMT14 + a.HCLMCAMT15 + a.HCLMCAMT16 + a.HCLMCAMT17 + a.HCLMCAMT18 + a.HCLMCAMT19 + a.HCLMCAMT20 + "
+        + "a.HCLMCAMT21 + a.HCLMCAMT22 + a.HCLMCAMT23 + a.HCLMCAMT24 + a.HCLMCAMT25 + a.HCLMCAMT26 + a.HCLMCAMT27 + a.HCLMCAMT28 + a.HCLMCAMT29 + a.HCLMCAMT30 "
+        + ") as PROPOSED, "
+        + "( "
+        + "a.HCLMAAMT1 + a.HCLMAAMT2 + a.HCLMAAMT3 + a.HCLMAAMT4 + a.HCLMAAMT5 + a.HCLMAAMT6 + a.HCLMAAMT7 + a.HCLMAAMT8 + a.HCLMAAMT9 + a.HCLMAAMT10 + "
+        + "a.HCLMAAMT11 + a.HCLMAAMT12 + a.HCLMAAMT13 + a.HCLMAAMT14 + a.HCLMAAMT15 + a.HCLMAAMT16 + a.HCLMAAMT17 + a.HCLMAAMT18 + a.HCLMAAMT19 + a.HCLMAAMT20 + "
+        + "a.HCLMAAMT21 + a.HCLMAAMT22 + a.HCLMAAMT23 + a.HCLMAAMT24 + a.HCLMAAMT25 + a.HCLMAAMT26 + a.HCLMAAMT27 + a.HCLMAAMT28 + a.HCLMAAMT29 + a.HCLMAAMT30 "
+        + ") as APPROVED, "
+        + "a.HCLMRECID as STATUS, "
+        + "(d.HMEM2DATA1 + '' + d.HMEM2DATA2 + '' + d.HMEM2DATA3) as MEMO, "
+        + "b.HDT1SEX, "
+        + "(a.HCLMPCODE1 + '' + a.HCLMPCODE2), "
+        + Libs.runningFields("a.HCLMCAMT", 30) + ", "
+        + Libs.runningFields("a.HCLMAAMT", 30) + ", "
+		+ Libs.runningFields("a.HCLMREF", 30) + " "
+        + "from IDNHLTPF.dbo.HLTCLM a "
+        + "inner join IDNHLTPF.dbo.HLTDT1 b "
+        + "on a.HCLMYY=b.HDT1YY "
+        + "and a.HCLMBR=b.HDT1BR "
+        + "and a.HCLMDIST=b.HDT1DIST "
+        + "and a.HCLMPONO=b.HDT1PONO "
+        + "and a.HCLMIDXNO=b.HDT1IDXNO "
+        + "and a.HCLMSEQNO=b.HDT1SEQNO "
+        + "inner join IDNHLTPF.dbo.HLTHDR c "
+        + "on a.HCLMYY=c.HHDRYY "
+        + "and a.HCLMBR=c.HHDRBR "
+        + "and a.HCLMDIST=c.HHDRDIST "
+        + "and a.HCLMPONO=c.HHDRPONO "
+        + "left outer join IDNHLTPF.dbo.HLTMEMO2 d "
+        + "on a.HCLMYY=d.HMEM2YY "
+        + "and a.HCLMBR=d.HMEM2BR "
+        + "and a.HCLMDIST=d.HMEM2DIST "
+        + "and a.HCLMPONO=d.HMEM2PONO "
+        + "and a.HCLMIDXNO=d.HMEM2IDXNO "
+        + "and a.HCLMSEQNO=d.HMEM2SEQNO "
+        + "and a.HCLMCOUNT=d.HMEM2COUNT "
+        + "and a.HCLMTCLAIM=d.HMEM2CLAIM "
+        + "inner join IDNHLTPF.dbo.HLTPRO e "
+        + "on a.HCLMNHOSCD=e.HPRONOMOR "
+        + "where b.HDT1CTR=0 "
+        + "and a.HCLMIDXNO<>99999 "
+        + "and a.HCLMRECID<>'C' "
+        + "and c.hhdryy=" + productPOJO.getProductYear() + " "
+        + "and c.hhdrpono=" + productPOJO.getProductId() + " ";
+
+if (period.equals("Date Range")) {
+    qry += "and convert(date, convert(varchar, a.HCLMCDATEY) + '-' + convert(varchar, a.HCLMCDATEM) + '-' + convert(varchar, a.HCLMCDATED)) "
+            + "between "
+            + "'" + new SimpleDateFormat("yyyy-MM-dd").format(dStartDate.getValue()) + "' and '" + new SimpleDateFormat("yyyy-MM-dd").format(dEndDate.getValue()) + "' ";
+}
+
+if (period.equals("Month Range")) {
+    Calendar calLast = Calendar.getInstance();
+    calLast.set(spnEndMonthYear.getValue(), cbEndMonth.getSelectedIndex(), 1);
+
+    qry += "and convert(date, convert(varchar, a.HCLMCDATEY) + '-' + convert(varchar, a.HCLMCDATEM) + '-' + convert(varchar, a.HCLMCDATED)) "
+            + "between "
+            + "'" + spnStartMonthYear.getValue() + "-" + (cbStartMonth.getSelectedIndex()+1) + "-1' and '" + spnEndMonthYear.getValue() + "-" + (cbEndMonth.getSelectedIndex()+1) + "-" + calLast.getActualMaximum(Calendar.DAY_OF_MONTH) + "' ";
+}
+
+if (period.equals("Year Range")) {
+    qry += "and a.HCLMCDATEY between " + spnStartYear.getValue() + " and " + spnEndYear.getValue() + " ";
+}
+
+Session s = Libs.sfDB.openSession();
+try {
+    List l = s.createSQLQuery(qry).list();
+
+    Workbook wb = new HSSFWorkbook();
+    Sheet sheet = wb.createSheet("Claim History with Detail");
+    sheet.createFreezePane(0, 1, 0, 1);
+    int cnt = 0;
+
+    org.apache.poi.ss.usermodel.Row row = sheet.createRow(cnt);
+
+    for (int i=0; i<columns.length; i++) {
+        Libs.createCell(row, i, columns[i]);
+    }
+
+    cnt++;
+
+    for (Object[] o : l) {
+        row = sheet.createRow(cnt);
+
+		/** Load plan benefits */
+		String benefitIds = "";
+		List lBenefits = Libs.getPlanItemPosition(productPOJO, Libs.nn(o[36]));
+		for (String benefitId : lBenefits) benefitIds += "'" + benefitId + "',";
+		if (benefitIds.endsWith(",")) benefitIds = benefitIds.substring(0, benefitIds.length()-1);
+		Map benefitIdMap = Libs.getBenefitDescriptionMap(benefitIds);
+
+        for (int i=0; i<36; i++) {
+            Libs.createCell(row, i, o[i]);
+        }
+
+        cnt++;
+        row = sheet.createRow(cnt);
+        Libs.createCell(row, 1, "CODE");
+        Libs.createCell(row, 2, "DESCRIPTION");
+        Libs.createCell(row, 3, "PROPOSED");
+        Libs.createCell(row, 4, "APPROVED");
+		Libs.createCell(row, 5, "REF");
+		Libs.createCell(row, 6, "REF MEMO");
+
+        for (int i=0; i<30; i++) {
+            String proposed = Libs.nn(o[37+i]);
+            String approved = Libs.nn(o[67+i]);
+			String ref = Libs.nn(o[97+i]);
+			String refMemo = getRJCode(ref);
+
+            if (!proposed.equals("0.00")) {
+                cnt++;
+                row = sheet.createRow(cnt);
+
+                Libs.createCell(row, 1, lBenefits.get(i));
+                Libs.createCell(row, 2, benefitIdMap.get(lBenefits.get(i)));
+                Libs.createCell(row, 3, proposed);
+                Libs.createCell(row, 4, approved);
+				Libs.createCell(row, 5, ref);
+				Libs.createCell(row, 6, refMemo);
+            }
+        }
+
+        cnt+=2;
+    }
+
+    FileOutputStream out = new FileOutputStream(reportPOJO.getFile());
+    wb.write(out);
+    out.close();
+    reportPOJO.setName(productPOJO.getProductYear() + "-" + productPOJO.getProductId() + "-Claim History With Detail-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xls");
+} catch (Exception ex) {
+    log.error("claim_history_w_detail.reportgenerator", ex);
+} finally {
+    if (s!=null && s.isOpen()) s.close();
+}

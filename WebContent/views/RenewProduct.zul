@@ -1,0 +1,60 @@
+<window border="normal" width="500px" height="325px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.RenewProductController">
+    <caption label="Renew Product" image="resources/icons/action.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton id="btnRenew" image="resources/icons/accept.png" tooltiptext="Renew" disabled="true" onClick="spaceOwner.renew();"/>
+        </toolbar>
+        <panelchildren>
+            <grid width="100%" height="100%">
+                <columns visible="false">
+                    <column label="Key" width="150px"/>
+                    <column/>
+                </columns>
+                <rows>
+                    <row>
+                        Client
+                        <bandbox id="bbClient" hflex="true">
+
+                        </bandbox>
+                    </row>
+                    <row>
+                        Product
+                        <bandbox id="bbProduct" hflex="true">
+
+                        </bandbox>
+                    </row>
+                    <row>
+                        <label value="Mature Date" style="font-style:italic;"/>
+                        <label id="lMatureDate"/>
+                    </row>
+                    <row>
+                        <label value="New Product Number" style="font-style:italic;"/>
+                        <label id="lNewProductNumber"/>
+                    </row>
+                    <row>
+                        New Starting Date
+                        <datebox id="dNewStartingDate" format="yyyy-MM-dd"/>
+                    </row>
+                    <row>
+                        New Effective Date
+                        <datebox id="dNewEffectiveDate" format="yyyy-MM-dd"/>
+                    </row>
+                    <row>
+                        New Mature Date
+                        <datebox id="dNewMatureDate" format="yyyy-MM-dd"/>
+                    </row>
+                    <row>
+                        Renew Members
+                        <combobox id="cbRenewMembers" readonly="true" width="50px">
+                            <attribute name="onCreate">
+                                self.setSelectedIndex(1);
+                            </attribute>
+                            <comboitem label="YES"/>
+                            <comboitem label="NO"/>
+                        </combobox>
+                    </row>
+                </rows>
+            </grid>
+        </panelchildren>
+    </panel>
+</window>

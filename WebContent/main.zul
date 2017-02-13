@@ -1,0 +1,115 @@
+<?page title="IMC Tools"?>
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:h="http://www.w3.org/1999/xhtml">
+    <window id="wMain" width="100%" height="100%" visible="false" use="com.imc.imctools.controllers.MainController">
+        <style>
+            body {
+                padding: 0px;
+                background-image: url("resources/images/tile.png");
+                background-repeat: repeat;
+            }
+            .hboxRemoveWhiteStrips td.z-hbox-sep {
+                width: 0;
+                padding: 0;
+            }
+            .shadowlogo {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -104px;
+                margin-top: -104px;
+            }
+        </style>
+        <h:div style="text-align:center;">
+            <h:img src="resources/images/shadowlogo.png" alt="shadowlogo" class="shadowlogo"/>
+        </h:div>
+        <menubar>
+            <menu label="System" image="resources/icons/system.png">
+                <menupopup>
+                    <menuitem label="Logout" onClick="spaceOwner.logout();"/>
+                </menupopup>
+            </menu>
+            <menu label="Acceptance" image="resources/icons/acceptance.png">
+                <menupopup>
+                    <menuitem label="Clients" image="resources/icons/client.png" onClick='spaceOwner.open("Clients");'/>
+                    <menuitem label="Products" image="resources/icons/product.png" onClick='spaceOwner.open("Products");'/>
+                    <menuseparator/>
+                    <menu label="Tools" image="resources/icons/tools.png">
+                        <menupopup>
+                            <menuitem label="Change Member Index" onClick='spaceOwner.open("ChangeMemberIndex");'/>
+                            <menuitem label="Delete Member" onClick='spaceOwner.open("DeleteMember");'/>
+                            <menuseparator/>
+                            <menuitem label="Analyze Upload File" onClick='spaceOwner.open("AnalyzeUploadFile");'/>
+                            <menuseparator/>
+                            <menuitem label="Upload ICD Exceptions" onClick='spaceOwner.open("UploadICDExceptions");'/>
+                            <menuseparator/>
+                            <menuitem label="Backdate Product" onClick='spaceOwner.open("BackdateProduct");'/>
+                            <menuseparator/>
+                            <menuitem label="Upload Plan Clien" onClick='spaceOwner.open("UploadPlanClien");'/>
+                            <menuseparator/>
+                            <menuitem label="Upload Benefit Clien" onClick='spaceOwner.open("UploadBenefitClien");'/>
+                            
+                        </menupopup>
+                    </menu>
+                    <menu label="Reports" image="resources/icons/printer.png">
+                        <menupopup>
+                            <menuitem label="All Active Members" image="resources/icons/printer.png" onClick='spaceOwner.allActiveMembersReport();'/>
+                        </menupopup>
+                    </menu>
+                </menupopup>
+            </menu>
+            <menu label="Analyst" image="resources/icons/analyst.png">
+                <menupopup>
+                    <menu label="Reports" image="resources/icons/printer.png">
+                        <menupopup>
+                            <menuitem label="Print Excess Letter" image="resources/icons/printer.png" onClick='spaceOwner.open("PrintExcessLetter");'/>
+                        </menupopup>
+                    </menu>
+                </menupopup>
+            </menu>
+            <menu label="Provider" image="resources/icons/provider.png">
+                <menupopup>
+                    <menuitem label="Receipt List" onClick='spaceOwner.open("ReceiptList");'/>
+                    <menuitem label="Receipt List by Provider" onClick='spaceOwner.open("ReceiptListByProvider");'/>
+                    <menuseparator/>
+                    <menuitem label="Provider List" onClick='spaceOwner.open("Providers");'/>
+                    <menuitem label="EDC List" onClick='spaceOwner.open("EDCs");'/>
+                </menupopup>
+            </menu>
+            <menu label="Finance" image="resources/icons/finance.png">
+                <menupopup>
+                    <menuitem label="Payment" image="resources/icons/finance.png" onClick='spaceOwner.open("Payment");'/>
+                </menupopup>
+            </menu>
+            <menu label="IT" image="resources/icons/it.png">
+                <menupopup>
+                    <menuitem label="IMCBS Editor" image="resources/icons/it.png" onClick='spaceOwner.open("IMCBSEditor");'/>
+                </menupopup>
+            </menu>
+            <menu label="Tools" image="resources/icons/tools.png">
+                <menupopup>
+                    <menu label="Claim">
+                        <menupopup>
+                            <menuitem label="Fix No Data" image="resources/icons/tools.png" onClick='spaceOwner.open("FixNoData");'/>
+                        </menupopup>
+                    </menu>
+                    <menu label="EDC">
+                        <menupopup>
+                            <menuitem label="Update Benefit Description" image="resources/icons/tools.png" onClick='spaceOwner.open("UpdateBenefitDescription");'/>
+                        </menupopup>
+                    </menu>
+                    <menu label="System">
+                        <menupopup>
+                            <menuitem label="Restart IDN-DB-01" image="resources/icons/tools.png" onClick='spaceOwner.restartIDNDB01();'/>
+                            <menuitem label="Restart IDN-EDC-01" image="resources/icons/tools.png" onClick='spaceOwner.restartIDNEDC01();'/>
+                        </menupopup>
+                    </menu>
+                </menupopup>
+            </menu>
+            <menu label="Reports" image="resources/icons/printer.png">
+                <menupopup>
+                    <menuitem label="Report Generator" image="resources/icons/printer.png" onClick='spaceOwner.open("ReportGenerator");'/>
+                </menupopup>
+            </menu>
+        </menubar>
+    </window>
+</zk>

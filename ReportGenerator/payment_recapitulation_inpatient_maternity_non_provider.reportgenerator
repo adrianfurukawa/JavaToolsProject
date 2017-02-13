@@ -1,0 +1,167 @@
+/**
+    tiPaymentRecapitulationNonProvider
+    Inpatient+Maternity Non-Provider
+    Status: Production
+*/
+
+import com.imc.imctools.tools.Libs;
+import java.util.*;
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Session;
+import java.text.SimpleDateFormat;
+
+String[] columns = new String[] {
+        "NO", "NO. KARTU", "NO. HID", "NAMA PASIEN", "DIAJUKAN",
+        "DIBAYAR", "EXCESS", "TGL. BAYAR", "KETERANGAN" };
+
+String qry = "select "
+        + "e.hdt1ncard as card_number, a.hclmcno as claim_number, e.hdt1name as patient, "
+        + "( "
+        + "cast(case when a.hclmref1='R' then a.hclmaamt1*0 else a.hclmaamt1*1 end as float) + "
+        + "cast(case when a.hclmref2='R' then a.hclmaamt2*0 else a.hclmaamt2*1 end as float) + "
+        + "cast(case when a.hclmref3='R' then a.hclmaamt3*0 else a.hclmaamt3*1 end as float) + "
+        + "cast(case when a.hclmref4='R' then a.hclmaamt4*0 else a.hclmaamt4*1 end as float) + "
+        + "cast(case when a.hclmref5='R' then a.hclmaamt5*0 else a.hclmaamt5*1 end as float) + "
+        + "cast(case when a.hclmref6='R' then a.hclmaamt6*0 else a.hclmaamt6*1 end as float) + "
+        + "cast(case when a.hclmref7='R' then a.hclmaamt7*0 else a.hclmaamt7*1 end as float) + "
+        + "cast(case when a.hclmref8='R' then a.hclmaamt8*0 else a.hclmaamt8*1 end as float) + "
+        + "cast(case when a.hclmref9='R' then a.hclmaamt9*0 else a.hclmaamt9*1 end as float) + "
+        + "cast(case when a.hclmref10='R' then a.hclmaamt10*0 else a.hclmaamt10*1 end as float) + "
+        + "cast(case when a.hclmref11='R' then a.hclmaamt11*0 else a.hclmaamt11*1 end as float) + "
+        + "cast(case when a.hclmref12='R' then a.hclmaamt12*0 else a.hclmaamt12*1 end as float) + "
+        + "cast(case when a.hclmref13='R' then a.hclmaamt13*0 else a.hclmaamt13*1 end as float) + "
+        + "cast(case when a.hclmref14='R' then a.hclmaamt14*0 else a.hclmaamt14*1 end as float) + "
+        + "cast(case when a.hclmref15='R' then a.hclmaamt15*0 else a.hclmaamt15*1 end as float) + "
+        + "cast(case when a.hclmref16='R' then a.hclmaamt16*0 else a.hclmaamt16*1 end as float) + "
+        + "cast(case when a.hclmref17='R' then a.hclmaamt17*0 else a.hclmaamt17*1 end as float) + "
+        + "cast(case when a.hclmref18='R' then a.hclmaamt18*0 else a.hclmaamt18*1 end as float) + "
+        + "cast(case when a.hclmref19='R' then a.hclmaamt19*0 else a.hclmaamt19*1 end as float) + "
+        + "cast(case when a.hclmref20='R' then a.hclmaamt20*0 else a.hclmaamt20*1 end as float) + "
+        + "cast(case when a.hclmref21='R' then a.hclmaamt21*0 else a.hclmaamt21*1 end as float) + "
+        + "cast(case when a.hclmref22='R' then a.hclmaamt22*0 else a.hclmaamt22*1 end as float) + "
+        + "cast(case when a.hclmref23='R' then a.hclmaamt23*0 else a.hclmaamt23*1 end as float) + "
+        + "cast(case when a.hclmref24='R' then a.hclmaamt24*0 else a.hclmaamt24*1 end as float) + "
+        + "cast(case when a.hclmref25='R' then a.hclmaamt25*0 else a.hclmaamt25*1 end as float) + "
+        + "cast(case when a.hclmref26='R' then a.hclmaamt26*0 else a.hclmaamt26*1 end as float) + "
+        + "cast(case when a.hclmref27='R' then a.hclmaamt27*0 else a.hclmaamt27*1 end as float) + "
+        + "cast(case when a.hclmref28='R' then a.hclmaamt28*0 else a.hclmaamt28*1 end as float) + "
+        + "cast(case when a.hclmref29='R' then a.hclmaamt29*0 else a.hclmaamt29*1 end as float) + "
+        + "cast(case when a.hclmref30='R' then a.hclmaamt30*0 else a.hclmaamt30*1 end as float) "
+        + ") as paid, "
+        + "( "
+        + "cast(case when a.hclmref1='R' then a.hclmcamt1*0 else a.hclmcamt1*1 end as float) + "
+        + "cast(case when a.hclmref2='R' then a.hclmcamt2*0 else a.hclmcamt2*1 end as float) + "
+        + "cast(case when a.hclmref3='R' then a.hclmcamt3*0 else a.hclmcamt3*1 end as float) + "
+        + "cast(case when a.hclmref4='R' then a.hclmcamt4*0 else a.hclmcamt4*1 end as float) + "
+        + "cast(case when a.hclmref5='R' then a.hclmcamt5*0 else a.hclmcamt5*1 end as float) + "
+        + "cast(case when a.hclmref6='R' then a.hclmcamt6*0 else a.hclmcamt6*1 end as float) + "
+        + "cast(case when a.hclmref7='R' then a.hclmcamt7*0 else a.hclmcamt7*1 end as float) + "
+        + "cast(case when a.hclmref8='R' then a.hclmcamt8*0 else a.hclmcamt8*1 end as float) + "
+        + "cast(case when a.hclmref9='R' then a.hclmcamt9*0 else a.hclmcamt9*1 end as float) + "
+        + "cast(case when a.hclmref10='R' then a.hclmcamt10*0 else a.hclmcamt10*1 end as float) + "
+        + "cast(case when a.hclmref11='R' then a.hclmcamt11*0 else a.hclmcamt11*1 end as float) + "
+        + "cast(case when a.hclmref12='R' then a.hclmcamt12*0 else a.hclmcamt12*1 end as float) + "
+        + "cast(case when a.hclmref13='R' then a.hclmcamt13*0 else a.hclmcamt13*1 end as float) + "
+        + "cast(case when a.hclmref14='R' then a.hclmcamt14*0 else a.hclmcamt14*1 end as float) + "
+        + "cast(case when a.hclmref15='R' then a.hclmcamt15*0 else a.hclmcamt15*1 end as float) + "
+        + "cast(case when a.hclmref16='R' then a.hclmcamt16*0 else a.hclmcamt16*1 end as float) + "
+        + "cast(case when a.hclmref17='R' then a.hclmcamt17*0 else a.hclmcamt17*1 end as float) + "
+        + "cast(case when a.hclmref18='R' then a.hclmcamt18*0 else a.hclmcamt18*1 end as float) + "
+        + "cast(case when a.hclmref19='R' then a.hclmcamt19*0 else a.hclmcamt19*1 end as float) + "
+        + "cast(case when a.hclmref20='R' then a.hclmcamt20*0 else a.hclmcamt20*1 end as float) + "
+        + "cast(case when a.hclmref21='R' then a.hclmcamt21*0 else a.hclmcamt21*1 end as float) + "
+        + "cast(case when a.hclmref22='R' then a.hclmcamt22*0 else a.hclmcamt22*1 end as float) + "
+        + "cast(case when a.hclmref23='R' then a.hclmcamt23*0 else a.hclmcamt23*1 end as float) + "
+        + "cast(case when a.hclmref24='R' then a.hclmcamt24*0 else a.hclmcamt24*1 end as float) + "
+        + "cast(case when a.hclmref25='R' then a.hclmcamt25*0 else a.hclmcamt25*1 end as float) + "
+        + "cast(case when a.hclmref26='R' then a.hclmcamt26*0 else a.hclmcamt26*1 end as float) + "
+        + "cast(case when a.hclmref27='R' then a.hclmcamt27*0 else a.hclmcamt27*1 end as float) + "
+        + "cast(case when a.hclmref28='R' then a.hclmcamt28*0 else a.hclmcamt28*1 end as float) + "
+        + "cast(case when a.hclmref29='R' then a.hclmcamt29*0 else a.hclmcamt29*1 end as float) + "
+        + "cast(case when a.hclmref30='R' then a.hclmcamt30*0 else a.hclmcamt30*1 end as float) "
+        + ") as proposed, "
+        + 0 + ", "
+        + "convert(date, (convert(varchar,a.hclmpdated) + '-' + convert(varchar,a.hclmpdatem) + '-' + convert(varchar,a.hclmpdatey)), 105) as payment_date, "
+        + "(g.hmem2data1 + g.hmem2data2 + g.hmem2data3 + g.hmem2data4) as memo "
+        + "from idnhltpf.dbo.hltclm a "
+        + "inner join idnhltpf.dbo.fin_paid b on a.hclmcno=b.hclmcno "
+        + "inner join idnhltpf.dbo.hlthdr c on a.hclmyy=c.hhdryy and a.hclmpono=c.hhdrpono "
+        + "inner join idnhltpf.dbo.hltpro d on a.hclmnhoscd=d.hpronomor "
+        + "inner join idnhltpf.dbo.hltdt1 e on e.hdt1yy=a.hclmyy and e.hdt1pono=a.hclmpono and e.hdt1idxno=a.hclmidxno and e.hdt1seqno=a.hclmseqno and e.hdt1ctr=0 "
+        + "inner join idnhltpf.dbo.hltins f on f.hinsid=c.hhdrinsid "
+        + "left outer join idnhltpf.dbo.hltmemo2 g on g.hmem2yy=a.hclmyy and g.hmem2pono=a.hclmpono and g.hmem2idxno=a.hclmidxno and g.hmem2seqno=a.hclmseqno and g.hmem2count=a.hclmcount and g.hmem2claim=a.hclmtclaim "
+        + "where "
+        + "a.hclmpdatey between left('$P{period_start}', 4) and left('$P{period_end}', 4) "
+        + "and convert(date, (convert(varchar,a.hclmpdated) + '-' + convert(varchar,a.hclmpdatem) + '-' + convert(varchar,a.hclmpdatey)), 105) between '$P{period_start}' and '$P{period_end}' "
+        + "and b.updateAS400=1 "
+        + "and a.hclmrecid<>'C' "
+        + "and a.hclmtclaim in ('I', 'R') "
+        + "and a.hclmnhoscd in (0, 9999) "
+        + "and a.hclmyy=" + productPOJO.getProductYear() + " "
+        + "and a.hclmpono=" + productPOJO.getProductId() + " "
+        + "order by payment_date asc, a.hclmnomor asc; ";
+
+if (period.equals("Date Range")) {
+    qry = qry
+            .replace("$P{period_start}", new SimpleDateFormat("yyyy-MM-dd").format(dStartDate.getValue()))
+            .replace("$P{period_end}", new SimpleDateFormat("yyyy-MM-dd").format(dEndDate.getValue()));
+}
+
+if (period.equals("Month Range")) {
+    Calendar calLast = Calendar.getInstance();
+    calLast.set(spnEndMonthYear.getValue(), cbEndMonth.getSelectedIndex(), 1);
+
+    qry = qry
+            .replace("$P{period_start}", spnStartMonthYear.getValue() + "-" + (cbStartMonth.getSelectedIndex()+1) + "-1")
+            .replace("$P{period_end}", spnEndMonthYear.getValue() + "-" + (cbEndMonth.getSelectedIndex()+1) + "-" + calLast.getActualMaximum(Calendar.DAY_OF_MONTH));
+}
+
+if (period.equals("Year Range")) {
+    qry = qry
+            .replace("$P{period_start}", spnStartYear.getValue() + "-1-1")
+            .replace("$P{period_end}", spnEndYear.getValue() + "-12-31");
+}
+
+Session s = Libs.sfDB.openSession();
+try {
+    List l = s.createSQLQuery(qry).list();
+
+    Workbook wb = new HSSFWorkbook();
+    Sheet sheet = wb.createSheet("Claim History");
+    sheet.createFreezePane(0, 1, 0, 1);
+    int cnt = 0;
+
+    org.apache.poi.ss.usermodel.Row row = sheet.createRow(cnt);
+
+    for (int i=0; i<columns.length; i++) {
+        Libs.createCell(row, i, columns[i]);
+    }
+
+    cnt++;
+
+    for (Object[] o : l) {
+        row = sheet.createRow(cnt);
+
+        Libs.createCell(row, 0, cnt);
+
+        for (int i=0; i<o.length; i++) {
+            Object val = o[i];
+            if (i==5) val = Double.valueOf(Libs.nn(o[5])) - Double.valueOf(Libs.nn(o[4]));
+            Libs.createCell(row, i+1, val);
+        }
+
+        cnt++;
+    }
+
+    FileOutputStream out = new FileOutputStream(reportPOJO.getFile());
+    wb.write(out);
+    out.close();
+    reportPOJO.setName(productPOJO.getProductYear() + "-" + productPOJO.getProductId() + "-Payment Recapitulation Inpatient Maternity Non Provider-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xls");
+} catch (Exception ex) {
+    log.error("payment_recapitulation_inpatient_maternity_non_provider.reportgenerator", ex);
+} finally {
+    if (s!=null && s.isOpen()) s.close();
+}

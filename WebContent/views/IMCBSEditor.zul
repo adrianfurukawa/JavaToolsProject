@@ -1,0 +1,22 @@
+<window border="normal" width="900px" height="520px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.IMCBSEditorController">
+    <caption label="IMCBS Editor" image="resources/icons/it.png"/>
+    <borderlayout width="100%" height="100%">
+        <west size="250px" splittable="true" collapsible="true" style="border:0px;">
+            <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                <listhead>
+                    <listheader label="Script Name"/>
+                </listhead>
+            </listbox>
+        </west>
+        <center style="border:0px;">
+            <panel width="100%" height="100%">
+                <toolbar>
+                    <toolbarbutton image="resources/icons/save.png" tooltiptext="Save"/>
+                </toolbar>
+                <panelchildren>
+                    <textbox id="tScript" width="100%" height="100%" rows="3"/>
+                </panelchildren>
+            </panel>
+        </center>
+    </borderlayout>
+</window>

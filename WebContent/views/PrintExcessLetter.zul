@@ -1,0 +1,55 @@
+<window border="normal" width="550px" height="318px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.PrintExcessLetterController">
+    <caption label="Print Excess Letter" image="resources/icons/printer.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton id="tbnPrint" image="resources/icons/printer.png" tooltiptext="Print" disabled="true" onClick="spaceOwner.print();"/>
+        </toolbar>
+        <panelchildren>
+            <grid hflex="true" vflex="true">
+                <columns visible="false">
+                    <column width="150px"/>
+                    <column/>
+                </columns>
+                <rows>
+                    <row>
+                        <label value="Claim Number" style="font-weight:bold;"/>
+                        <textbox id="tClaimNumber" width="120px" onOK="spaceOwner.loadClaim();"/>
+                    </row>
+                    <row>
+                        <label id="lIndexSequence" value="Index-Sequence-Count" style="font-style:italic;"/>
+                        <hlayout>
+                            <intbox id="iIndex" width="50px" disabled="true"/>
+                            <combobox id="cbSequence" width="40px" readonly="true" disabled="true">
+                                <comboitem label="A"/>
+                                <comboitem label="B"/>
+                                <comboitem label="C"/>
+                                <comboitem label="D"/>
+                                <comboitem label="E"/>
+                                <comboitem label="F"/>
+                                <comboitem label="G"/>
+                                <comboitem label="H"/>
+                            </combobox>
+                            <intbox id="iCount" width="30px" disabled="true" onOK="spaceOwner.indexSequenceSelected();"/>
+                        </hlayout>
+                    </row>
+                    <row>
+                        <label id="lReceiptDate" value="Receipt Date" style="font-style:italic;"/>
+                        <datebox id="dReceiptDate" format="yyyy-MM-dd" disabled="true"/>
+                    </row>
+                    <row>
+                        <label id="lDestination" value="Destination" style="font-style:italic;"/>
+                        <textbox id="tDestination" hflex="true" disabled="true"/>
+                    </row>
+                    <row>
+                        <label id="lExcessAmount" value="Excess Amount" style="font-style:italic;"/>
+                        <doublebox id="dbExcessAmount" format="#,###.##" style="text-align:right;" disabled="true"/>
+                    </row>
+                    <row>
+                        <label id="lNotes" value="Notes" style="font-style:italic;"/>
+                        <textbox id="tNotes" hflex="true" rows="3" disabled="true"/>
+                    </row>
+                </rows>
+            </grid>
+        </panelchildren>
+    </panel>
+</window>

@@ -1,0 +1,213 @@
+<window border="normal" width="850px" height="450px" position="center" closable="true" sizable="true" use="com.imc.imctools.controllers.ProductDetailController">
+    <caption label="Product Detail" image="resources/icons/product.png"/>
+    <panel width="100%" height="100%">
+        <panelchildren>
+            <tabbox width="100%" height="100%">
+                <tabs>
+                    <tab label="Information"/>
+                    <tab label="Plans"/>
+                    <tab label="Labels"/>
+                    <tab label="Members"/>
+                    <tab label="Claims"/>
+                    <tab label="Member Bank Account"/>
+                    <tab label="HLTGAJISUH"/>
+                </tabs>
+                <tabpanels>
+                    <tabpanel style="padding:0px;">
+                        <menubar style="border-top:0px;">
+                            <menu label="Action" image="resources/icons/action.png">
+                                <menupopup>
+                                    <menuitem label="Blacklist Product" onClick="spaceOwner.blacklistProduct();"/>
+                                    <menuseparator/>
+                                    <menuitem label="Renew Product" onClick="spaceOwner.renewProduct();"/>
+                                    <menuseparator/>
+                                    <menu label="Fix">
+                                        <menupopup>
+                                            <menuitem label="Fix HLTGAJISUH" onClick="spaceOwner.fixHLTGAJISUH();"/>
+                                            <menuitem label="Fix Konversi" onClick="spaceOwner.fixKonversi();"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menuseparator/>
+                                    <menu label="Upload">
+                                        <menupopup>
+                                            <menuitem label="Limit Gaji" upload="true" onUpload="spaceOwner.uploadLimitGaji(event);"/>
+                                        </menupopup>
+                                    </menu>
+                                </menupopup>
+                            </menu>
+                        </menubar>
+                        <panel style="padding:10px;">
+                            <panelchildren>
+                                <groupbox title="Information" closable="false">
+                                    <grid width="100%" height="100%" style="border:0px;">
+                                        <columns visible="false">
+                                            <column width="120px" align="right"/>
+                                            <column/>
+                                            <column width="120px" align="right"/>
+                                            <column width="100px"/>
+                                        </columns>
+                                        <rows>
+                                            <row>
+                                                Product Number
+                                                <label id="lProductNumber"/>
+                                                Starting Date
+                                                <label id="lStartingDate"/>
+                                            </row>
+                                            <row>
+                                                Product Name
+                                                <label id="lProductName" style="font-weight:bold;"/>
+                                                Effective Date
+                                                <label id="lEffectiveDate"/>
+                                            </row>
+                                            <row>
+                                                Client
+                                                <label id="lClient"/>
+                                                Mature Date
+                                                <label id="lMatureDate"/>
+                                            </row>
+                                        </rows>
+                                    </grid>
+                                </groupbox>
+                            </panelchildren>
+                        </panel>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <borderlayout width="100%" height="100%">
+                            <north size="150px" splittable="true" style="border-left:0px; border-top:0px; border-right:0px;">
+                                <listbox id="lbPlans" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;" onSelect="spaceOwner.planSelected();">
+                                    <listhead>
+                                        <listheader label="Plan"/>
+                                        <listheader label="Limited" width="60px"/>
+                                        <listheader label="Limit" width="100px"/>
+                                        <listheader label="Reimburse (%)" width="100px"/>
+                                    </listhead>
+                                </listbox>
+                            </north>
+                            <center style="border-left:0px; border-right:0px; border-bottom:0px;">
+                                <listbox id="lbBenefits" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                    <listhead sizable="true">
+                                        <listheader label="Benefit Code" width="100px"/>
+                                        <listheader label="Description"/>
+                                        <listheader label="Limit" width="100px"/>
+                                    </listhead>
+                                </listbox>
+                            </center>
+                        </borderlayout>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <listbox id="lbLabels" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                            <listhead sizable="true">
+                                <listheader label="Code" width="80px"/>
+                                <listheader label="Title" width="80px"/>
+                                <listheader label="Name" width="300px"/>
+                                <listheader label="Address"/>
+                            </listhead>
+                        </listbox>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <panel width="100%" height="100%">
+                            <panelchildren>
+                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                    <toolbar height="21px">
+                                        <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refreshMembers();"/>
+                                    </toolbar>
+                                    <toolbar align="end" height="21px">
+                                        <image src="resources/icons/browse.png"/>
+                                        <textbox id="tQuickSearchMembers" onOK="spaceOwner.quickSearchMembers();"/>
+                                    </toolbar>
+                                </hbox>
+                                <listbox id="lbMembers" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="50px"/>
+                                        <listheader label="Seq" width="50px"/>
+                                        <listheader label="Card Number" width="130px"/>
+                                        <listheader label="Name"/>
+                                    </listhead>
+                                </listbox>
+                                <paging id="pgMembers" pageSize="20"/>
+                            </panelchildren>
+                        </panel>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <panel width="100%" height="100%">
+                            <panelchildren>
+                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                    <toolbar height="21px">
+                                        <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refreshClaims();"/>
+                                    </toolbar>
+                                    <toolbar align="end" height="21px">
+                                        <image src="resources/icons/browse.png"/>
+                                        <textbox id="tQuickSearchClaims" onOK="spaceOwner.quickSearchClaims();"/>
+                                    </toolbar>
+                                </hbox>
+                                <listbox id="lbClaims" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                    <listhead sizable="true">
+                                        <listheader label="Type" width="40px"/>
+                                        <listheader label="Claim Number" width="100px"/>
+                                        <listheader label="Claim Date" width="80px"/>
+                                        <listheader label="ICD" width="100px"/>
+                                    </listhead>
+                                </listbox>
+                                <paging id="pgClaims" pageSize="20"/>
+                            </panelchildren>
+                        </panel>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <panel width="100%" height="100%">
+                            <panelchildren>
+                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                    <toolbar height="21px">
+                                        <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refreshMemberBankAccounts();"/>
+                                    </toolbar>
+                                    <toolbar align="end" height="21px">
+                                        <image src="resources/icons/browse.png"/>
+                                        <textbox id="tQuickSearchMemberBankAccounts" onOK="spaceOwner.quickSearchMemberBankAccounts();"/>
+                                    </toolbar>
+                                </hbox>
+                                <listbox id="lbMemberBankAccounts" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="50px"/>
+                                        <listheader label="Seq" width="50px"/>
+                                        <listheader label="Card Number" width="130px"/>
+                                        <listheader label="Name" width="200px"/>
+                                        <listheader label="Account Number" width="100px"/>
+                                        <listheader label="Account Name" width="100px"/>
+                                        <listheader label="Account Name" width="100px"/>
+                                        <listheader label="Bank" width="100px"/>
+                                        <listheader label="Branch" width="100px"/>
+                                    </listhead>
+                                </listbox>
+                                <paging id="pgMemberBankAccounts" pageSize="20"/>
+                            </panelchildren>
+                        </panel>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <panel width="100%" height="100%">
+                            <panelchildren>
+                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                    <toolbar height="21px">
+                                        <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refreshHLTGAJISUH();"/>
+                                    </toolbar>
+                                    <toolbar align="end" height="21px">
+                                        <image src="resources/icons/browse.png"/>
+                                        <textbox id="tQuickSearchHLTGAJISUH" onOK="spaceOwner.quickSearchHLTGAJISUH();"/>
+                                    </toolbar>
+                                </hbox>
+                                <listbox id="lbHLTGAJISUH" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="50px"/>
+                                        <listheader label="Seq" width="50px"/>
+                                        <listheader label="Card Number" width="130px"/>
+                                        <listheader label="Name"/>
+                                        <listheader label="Limit" width="130px"/>
+                                    </listhead>
+                                </listbox>
+                                <paging id="pgHLTGAJISUH" pageSize="20"/>
+                            </panelchildren>
+                        </panel>
+                    </tabpanel>
+                </tabpanels>
+            </tabbox>
+        </panelchildren>
+    </panel>
+</window>

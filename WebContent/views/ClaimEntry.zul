@@ -1,0 +1,211 @@
+<window border="normal" width="1200px" height="520px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ClaimEntryController">
+    <caption label="Claim Entry" image="resources/icons/analyst.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Save" onClick="spaceOwner.save();"/>
+            <toolbarbutton image="resources/icons/clear.png" tooltiptext="Clear" onClick="spaceOwner.clear();"/>
+        </toolbar>
+        <panelchildren>
+            <borderlayout width="100%" height="100%">
+                <west size="380px" splittable="true" style="padding:5px;">
+                    <tabbox width="100%" height="100%">
+                        <tabs>
+                            <tab label="Claim"/>
+                            <tab label="Memo"/>
+                        </tabs>
+                        <tabpanels>
+                            <tabpanel>
+                                <grid width="100%" height="100%" style="border:0px;">
+                                    <columns>
+                                        <column width="110px" align="right"/>
+                                        <column/>
+                                    </columns>
+                                    <rows>
+                                        <row>
+                                            Claim Type
+                                            <combobox id="cbClaimType" readonly="true">
+                                                <comboitem label="INPATIENT"/>
+                                                <comboitem label="OUTPATIENT"/>
+                                                <comboitem label="MATERNITY"/>
+                                                <comboitem label="DENTAL"/>
+                                                <comboitem label="GLASSES"/>
+                                            </combobox>
+                                        </row>
+                                        <row>
+                                            Company
+                                            <vlayout>
+                                                <hlayout>
+                                                    <intbox id="iPolicyYear" width="40px" maxlength="4"/>-
+                                                    <intbox width="10px" disabled="true" value="1"/>-
+                                                    <intbox width="10px" disabled="true" value="0"/>-
+                                                    <intbox id="iPolicyNumber" width="50px" maxlength="5"/>
+                                                </hlayout>
+                                                <bandbox id="bbCompany" hflex="true" readonly="true">
+                                                    <bandpopup width="500px" height="250px">
+                                                        <panel width="100%" height="100%">
+                                                            <panelchildren>
+                                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                                    <toolbar align="end" height="21px">
+                                                                        <image src="resources/icons/browse.png"/>
+                                                                        <textbox id="tQuickSearchCompanies" onOK="spaceOwner.quickSearchCompanies();"/>
+                                                                    </toolbar>
+                                                                </hbox>
+                                                                <listbox id="lbCompanies" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.lbCompaniesSelected();">
+                                                                    <listhead>
+                                                                        <listheader label="Year" width="40px"/>
+                                                                        <listheader label="Policy #" width="60px"/>
+                                                                        <listheader label="Name"/>
+                                                                    </listhead>
+                                                                </listbox>
+                                                                <paging id="pgCompanies" pageSize="20"/>
+                                                            </panelchildren>
+                                                        </panel>
+                                                    </bandpopup>
+                                                </bandbox>
+                                            </vlayout>
+                                        </row>
+                                        <row>
+                                            Member
+                                            <vlayout>
+                                                <hlayout>
+                                                    <intbox id="iIndex" width="50px" maxlength="5"/>-
+                                                    <textbox id="tSequence" width="10px" maxlength="1"/>
+                                                </hlayout>
+                                                <bandbox id="bbMember" hflex="true" readonly="true">
+                                                    <bandpopup width="500px" height="250px">
+                                                        <panel width="100%" height="100%">
+                                                            <panelchildren>
+                                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                                    <toolbar align="end" height="21px">
+                                                                        <image src="resources/icons/browse.png"/>
+                                                                        <textbox id="tQuickSearchMembers" onOK="spaceOwner.quickSearchMembers();"/>
+                                                                    </toolbar>
+                                                                </hbox>
+                                                                <listbox id="lbMembers" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.lbMembersSelected();">
+                                                                    <listhead>
+                                                                        <listheader label="Year" width="40px"/>
+                                                                        <listheader label="Policy #" width="60px"/>
+                                                                        <listheader label="Index" width="50px"/>
+                                                                        <listheader label="Seq" width="40px"/>
+                                                                        <listheader label="Name"/>
+                                                                    </listhead>
+                                                                </listbox>
+                                                                <paging id="pgMembers" pageSize="20"/>
+                                                            </panelchildren>
+                                                        </panel>
+                                                    </bandpopup>
+                                                </bandbox>
+                                            </vlayout>
+                                        </row>
+                                        <row>
+                                            Provider
+                                            <vlayout>
+                                                <intbox id="iProviderCode" width="100px" maxlength="8"/>
+                                                <bandbox id="bbProvider" hflex="true" readonly="true">
+                                                    <bandpopup width="500px" height="250px">
+                                                        <panel width="100%" height="100%">
+                                                            <panelchildren>
+                                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                                    <toolbar height="21px">
+                                                                        <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refreshProviders();"/>
+                                                                    </toolbar>
+                                                                    <toolbar align="end" height="21px">
+                                                                        <image src="resources/icons/browse.png"/>
+                                                                        <textbox id="tQuickSearchProviders" onOK="spaceOwner.quickSearchProviders();"/>
+                                                                    </toolbar>
+                                                                </hbox>
+                                                                <listbox id="lbProviders" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.lbProvidersSelected();">
+                                                                    <listhead>
+                                                                        <listheader label="Provider Code" width="100px"/>
+                                                                        <listheader label="Name"/>
+                                                                    </listhead>
+                                                                </listbox>
+                                                                <paging id="pgProviders" pageSize="20"/>
+                                                            </panelchildren>
+                                                        </panel>
+                                                    </bandpopup>
+                                                </bandbox>
+                                            </vlayout>
+                                        </row>
+                                        <row>
+                                            ICD
+                                            <hlayout>
+                                                <textbox id="tICD1" width="40px"/>
+                                                <textbox id="tICD2" width="40px"/>
+                                                <textbox id="tICD3" width="40px"/>
+                                            </hlayout>
+                                        </row>
+                                        <row>
+                                            Special Disease
+                                            <hlayout>
+                                                <radiogroup>
+                                                    <radio id="radYesSpecialDisease" label="Yes"/>
+                                                    <radio id="radNoSpecialDisease" label="No"/>
+                                                </radiogroup>
+                                            </hlayout>
+                                        </row>
+                                        <row id="rServiceDate" visible="false">
+                                            Service In/Out
+                                            <hlayout>
+                                                <datebox id="dServiceIn" format="dd-MM-yyyy" width="90px"/>-
+                                                <datebox id="dServiceOut" format="dd-MM-yyyy" width="90px"/>
+                                            </hlayout>
+                                        </row>
+                                        <row id="rReceiptDate" visible="false">
+                                            Receipt Date
+                                            <datebox id="dReceiptDate" format="dd-MM-yyyy"/>
+                                        </row>
+                                        <row>
+                                            Plan
+                                            <combobox id="cbPlan" width="80px" readonly="true"/>
+                                        </row>
+                                        <row>
+                                            Available Limit
+                                            <doublebox id="dbAvailableLimit" format="#,###.##" style="text-align:right;" readonly="true"/>
+                                        </row>
+                                    </rows>
+                                </grid>
+                            </tabpanel>
+                            <tabpanel>
+                                <textbox id="tMemo" hflex="true" height="98%" multiline="true"/>
+                            </tabpanel>
+                        </tabpanels>
+                    </tabbox>
+                </west>
+                <center>
+                    <panel width="100%" height="100%">
+                        <toolbar>
+                            <toolbarbutton image="resources/icons/clear.png" tooltiptext="Clear" onClick="spaceOwner.clearBenefits();"/>
+                        </toolbar>
+                        <panelchildren>
+                            <listbox id="lb" disabled="true" width="100%" height="100%" vflex="true" style="white-space:nowrap; border-left:0px; border-right:0px; border-bottom:0px; border-top:0px;">
+                                <auxhead>
+                                    <auxheader colspan="3"/>
+                                    <auxheader label="Proposed" colspan="2"/>
+                                    <auxheader label="Approved" colspan="2"/>
+                                    <auxheader/>
+                                </auxhead>
+                                <listhead>
+                                    <listheader label="Code" width="50px"/>
+                                    <listheader label="Description" width="240px"/>
+                                    <listheader label="Limit" width="100px"/>
+                                    <listheader label="Day" width="40px"/>
+                                    <listheader label="Amount" width="100px"/>
+                                    <listheader label="Day" width="40px"/>
+                                    <listheader label="Amount" width="100px"/>
+                                    <listheader label="Remark"/>
+                                </listhead>
+                                <listfoot>
+                                    <listfooter span="3"/>
+                                    <listfooter id="lfProposed" style="text-align:right;" span="2" label=".00"/>
+                                    <listfooter id="lfApproved" style="text-align:right;" span="2" label=".00"/>
+                                    <listfooter/>
+                                </listfoot>
+                            </listbox>
+                        </panelchildren>
+                    </panel>
+                </center>
+            </borderlayout>
+        </panelchildren>
+    </panel>
+</window>

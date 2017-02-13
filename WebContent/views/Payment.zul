@@ -1,0 +1,89 @@
+<window border="normal" width="800px" height="400px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.PaymentController">
+    <caption label="Payment" image="resources/icons/finance.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Submit" onClick="spaceOwner.submit();"/>
+        </toolbar>
+        <panelchildren>
+            <borderlayout width="100%" height="100%">
+                <north size="68px" style="border-top:0px; border-left:0px; border-right:0px;">
+                    <grid width="100%" height="100%" style="border:0px;">
+                        <columns visible="false">
+                            <column width="120px"/>
+                            <column/>
+                            <column width="120px"/>
+                            <column/>
+                        </columns>
+                        <rows>
+                            <row>
+                                Type
+                                <combobox id="cbPaymentType" width="150px" readonly="true">
+                                    <attribute name="onCreate">
+                                        self.setSelectedIndex(0);
+                                    </attribute>
+                                    <comboitem label="REIMBURSEMENT"/>
+                                    <comboitem label="PROVIDER"/>
+                                </combobox>
+                                Cheque Number
+                                <textbox id="tChequeNumber" width="120px" onOK="spaceOwner.populate();"/>
+                            </row>
+                            <row>
+                                Bank
+                                <combobox id="cbBank" width="200px" readonly="true">
+                                    <attribute name="onCreate">
+                                        self.setSelectedIndex(0);
+                                    </attribute>
+                                    <comboitem label="DEUTSCHE BANK"/>
+                                </combobox>
+                                Account Number
+                                <combobox id="cbAccountNumber" width="150px" readonly="true">
+                                    <attribute name="onCreate">
+                                        self.setSelectedIndex(0);
+                                    </attribute>
+                                    <comboitem label="0001396038"/>
+                                    <comboitem label="0001388038"/>
+                                </combobox>
+                            </row>
+                        </rows>
+                    </grid>
+                </north>
+                <center style="border-left:0px; border-bottom:0px; border-right:0px;">
+                    <panel width="100%" height="100%">
+                        <panelchildren>
+                            <listbox id="lbReimbursement" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;">
+                                <listhead sizable="true">
+                                    <listheader label="Account Number" width="120px"/>
+                                    <listheader label="Account Holder" width="120px"/>
+                                    <listheader label="Bank" width="120px"/>
+                                    <listheader label="Address" width="120px"/>
+                                    <listheader label="HID" width="120px"/>
+                                    <listheader label="Amount" width="100px"/>
+                                    <listheader label="BI Code" width="80px"/>
+                                    <listheader label="Product Code" width="100px"/>
+                                    <listheader label="Product Name" width="120px"/>
+                                </listhead>
+                            </listbox>
+                            <listbox id="lbProvider" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px;" visible="false">
+                                <listhead sizable="true">
+                                    <listheader label="Proposed Amount" width="120px"/>
+                                    <listheader label="Paid Amount" width="120px"/>
+                                    <listheader label="Discount" width="100px"/>
+                                    <listheader label="Real Discount" width="100px"/>
+                                    <listheader label="Internal Number" width="120px"/>
+                                    <listheader label="Receipt Number" width="120px"/>
+                                    <listheader label="HID" width="120px"/>
+                                    <listheader label="Provider" width="200px"/>
+                                    <listheader label="Product Code" width="100px"/>
+                                    <listheader label="Product Name" width="120px"/>
+                                    <listheader label="Client" width="120px"/>
+                                    <listheader label="Status" width="80px"/>
+                                    <listheader label="Batch Date" width="100px"/>
+                                </listhead>
+                            </listbox>
+                        </panelchildren>
+                    </panel>
+                </center>
+            </borderlayout>
+        </panelchildren>
+    </panel>
+</window>

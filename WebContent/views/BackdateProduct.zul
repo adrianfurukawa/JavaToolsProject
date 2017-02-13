@@ -1,0 +1,81 @@
+<window border="normal" width="550px" height="200px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.BackdateProductController">
+    <caption label="Backdate Product" image="resources/icons/tools.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Ok" onClick="spaceOwner.backdateProduct();"/>
+        </toolbar>
+        <panelchildren>
+            <grid hflex="true" width="100%" height="100%">
+                <columns visible="false">
+                    <column width="150px"/>
+                    <column/>
+                </columns>
+                <rows>
+                    <row>
+                        Client
+                        <bandbox id="bbClient" hflex="true" readonly="true">
+                            <bandpopup width="500px" height="250px">
+                                <panel width="100%" height="100%">
+                                    <panelchildren>
+                                        <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                            <toolbar height="21px">
+                                                <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.clientSelected();"/>
+                                            </toolbar>
+                                            <toolbar align="end" height="21px">
+                                                <image src="resources/icons/browse.png"/>
+                                                <textbox id="tQuickSearchClients" onOK="spaceOwner.quickSearchClients();"/>
+                                            </toolbar>
+                                        </hbox>
+                                        <listbox id="lbClients" width="100%" height="100%" vflex="true" style="white-space:nowrap;" onDoubleClick="spaceOwner.clientSelected();">
+                                            <listhead sizable="true">
+                                                <listheader label="Client ID" width="80px"/>
+                                                <listheader label="Name"/>
+                                                <listheader label="Type" width="120px"/>
+                                            </listhead>
+                                        </listbox>
+                                        <paging id="pgClients" pageSize="20"/>
+                                    </panelchildren>
+                                </panel>
+                            </bandpopup>
+                        </bandbox>
+                    </row>
+                    <row>
+                        Product
+                        <bandbox id="bbProduct" hflex="true" readonly="true">
+                            <bandpopup width="500px" height="250px">
+                                <panel width="100%" height="100%">
+                                    <panelchildren>
+                                        <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                            <toolbar height="21px">
+                                                <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.productSelected();"/>
+                                            </toolbar>
+                                            <toolbar align="end" height="21px">
+                                                <image src="resources/icons/browse.png"/>
+                                                <textbox id="tQuickSearchProducts" onOK="spaceOwner.quickSearchProducts();"/>
+                                            </toolbar>
+                                        </hbox>
+                                        <listbox id="lbProducts" width="100%" height="100%" vflex="true" style="white-space:nowrap; border-top:0px;" onDoubleClick="spaceOwner.productSelected();">
+                                            <listhead sizable="true">
+                                                <listheader label="Year" width="70px"/>
+                                                <listheader label="Product Number" width="110px"/>
+                                                <listheader label="Name"/>
+                                            </listhead>
+                                        </listbox>
+                                    </panelchildren>
+                                </panel>
+                            </bandpopup>
+                        </bandbox>
+                    </row>
+                    <row>
+                        Current Start Date
+                        <datebox id="dCurrentStartDate" format="yyyy-MM-dd" disabled="true"/>
+                    </row>
+                    <row>
+                        New Start Date
+                        <datebox id="dNewStartDate" format="yyyy-MM-dd"/>
+                    </row>
+                </rows>
+            </grid>
+        </panelchildren>
+    </panel>
+</window>

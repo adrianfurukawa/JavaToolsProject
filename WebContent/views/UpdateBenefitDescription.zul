@@ -1,0 +1,24 @@
+<window border="normal" width="600px" height="520px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.UpdateBenefitDescriptionController">
+    <caption label="Update Benefit Description" image="resources/icons/tools.png"/>
+    <panel width="100%" height="100%">
+        <panelchildren>
+            <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                <toolbar height="21px">
+                    <toolbarbutton image="resources/icons/save.png" tooltiptext="Save" onClick="spaceOwner.save();"/>
+                    <toolbarbutton image="resources/icons/clear.png" tooltiptext="Clear" onClick="spaceOwner.clear();"/>
+                </toolbar>
+                <toolbar align="end" height="21px">
+                    <image src="resources/icons/browse.png"/>
+                    <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                </toolbar>
+            </hbox>
+            <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px" onDoubleClick="spaceOwner.clientSelected();">
+                <listhead>
+                    <listheader label="Benefit Code" width="100px"/>
+                    <listheader label="Description"/>
+                    <listheader label="Update" width="80px"/>
+                </listhead>
+            </listbox>
+        </panelchildren>
+    </panel>
+</window>

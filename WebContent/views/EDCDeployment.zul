@@ -1,0 +1,61 @@
+<window border="normal" width="500px" height="270px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.EDCDeploymentController">
+    <caption label="EDC Deployment"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton id="btnDeploy" image="resources/icons/accept.png" tooltiptext="Deploy" disabled="true" onClick="spaceOwner.deploy();"/>
+        </toolbar>
+        <panelchildren>
+            <grid width="100%" height="100%">
+                <columns visible="false">
+                    <column label="Key" width="150px"/>
+                    <column/>
+                </columns>
+                <rows>
+                    <row>
+                        TID
+                        <label id="lTID"/>
+                    </row>
+                    <row>
+                        Serial Number
+                        <label id="lSN"/>
+                    </row>
+                    <row>
+                        Current Provider
+                        <label id="lCurrentProvider"/>
+                    </row>
+                    <row>
+                        New Provider
+                        <bandbox id="bbNewProvider" hflex="true" readonly="true">
+                            <bandpopup width="500px" height="250px">
+                                <panel width="100%" height="100%">
+                                    <panelchildren>
+                                        <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                            <toolbar height="21px">
+                                                <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.providerSelected();"/>
+                                            </toolbar>
+                                            <toolbar align="end" height="21px">
+                                                <image src="resources/icons/browse.png"/>
+                                                <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                                            </toolbar>
+                                        </hbox>
+                                        <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap; border-top:0px;" onDoubleClick="spaceOwner.providerSelected();">
+                                            <listhead sizable="true">
+                                                <listheader label="Provider Code" width="80px"/>
+                                                <listheader label="Name"/>
+                                            </listhead>
+                                        </listbox>
+                                        <paging id="pg" pageSize="20"/>
+                                    </panelchildren>
+                                </panel>
+                            </bandpopup>
+                        </bandbox>
+                    </row>
+                    <row>
+                        Notes
+                        <textbox id="tNotes" hflex="true" rows="3" vflex="true"/>
+                    </row>
+                </rows>
+            </grid>
+        </panelchildren>
+    </panel>
+</window>

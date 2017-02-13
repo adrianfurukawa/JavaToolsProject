@@ -1,0 +1,140 @@
+<window border="normal" width="800px" height="420px" position="center" closable="true" sizable="true" contentStyle="padding:5px;" use="com.imc.imctools.controllers.ProviderDetail1Controller">
+    <caption label="Provider Detail" image="resources/icons/provider.png"/>
+    <tabbox width="100%" height="100%">
+        <tabs>
+            <tab label="Information"/>
+            <tab label="EDC List"/>
+            <tab label="Claim History"/>
+        </tabs>
+        <tabpanels>
+            <tabpanel style="padding:0px; overflow:auto;">
+                <menubar style="border-top:0px;">
+                    <menu label="Action" image="resources/icons/action.png">
+                        <menupopup>
+                            <menuitem label="Delete Provider" onClick="spaceOwner.deleteProvider();"/>
+                        </menupopup>
+                    </menu>
+                </menubar>
+                <panel style="padding:5px;">
+                    <panelchildren>
+                        <groupbox title="Information" closable="false">
+                            <grid width="100%" height="100%" style="border:0px;">
+                                <columns visible="false">
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        Provider Code
+                                        <cell colspan="3">
+                                            <label id="lProviderCode"/>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Name
+                                        <cell colspan="3">
+                                            <label id="lName"/>
+                                        </cell>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                        <groupbox title="Address" closable="false">
+                            <grid width="100%" height="100%" style="border:0px;">
+                                <columns visible="false">
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        Line 1
+                                        <cell colspan="3">
+                                            <label id="lAddress1"/>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Line 2
+                                        <cell colspan="3">
+                                            <label id="lAddress2"/>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Line 3
+                                        <cell colspan="3">
+                                            <label id="lAddress3"/>
+                                        </cell>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                        <groupbox title="Phone Numbers" closable="false">
+                            <grid width="100%" height="100%" style="border:0px;">
+                                <columns visible="false">
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                    <column width="120px" align="right"/>
+                                    <column/>
+                                </columns>
+                                <rows>
+                                    <row>
+                                        Phone 1
+                                        <cell colspan="3">
+                                            <hlayout>
+                                                <label id="lPhoneCode1"/>
+                                                <label id="lPhoneNumber1"/>
+                                            </hlayout>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Phone 2
+                                        <cell colspan="3">
+                                            <hlayout>
+                                                <label id="lPhoneCode2"/>
+                                                <label id="lPhoneNumber2"/>
+                                            </hlayout>
+                                        </cell>
+                                    </row>
+                                    <row>
+                                        Phone 3
+                                        <cell colspan="3">
+                                            <hlayout>
+                                                <label id="lPhoneCode3"/>
+                                                <label id="lPhoneNumber3"/>
+                                            </hlayout>
+                                        </cell>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </groupbox>
+                    </panelchildren>
+                </panel>
+            </tabpanel>
+            <tabpanel style="padding:0px;">
+                <listbox id="lbEDCList" width="100%" height="100%" vflex="true" style="white-space:nowrap; border:0px;" onDoubleClick="spaceOwner.edcSelected();">
+                    <listhead sizable="true">
+                        <listheader label="TID"/>
+                        <listheader label="S/N"/>
+                        <listheader label="Usage" width="100px"/>
+                        <listheader label="Total Usage" width="100px"/>
+                    </listhead>
+                </listbox>
+                <paging id="pgEDCList" pageSize="20"/>
+            </tabpanel>
+            <tabpanel style="padding:0px;">
+                <listbox id="lbClaimHistory" width="100%" height="100%" vflex="true" style="white-space:nowrap; border:0px;">
+                    <listhead sizable="true">
+                        <listheader label="Type" width="80px"/>
+                        <listheader label="Name" width="200px"/>
+                        <listheader label="Product Name" width="200px"/>
+                        <listheader label="Client Name" width="200px"/>
+                    </listhead>
+                </listbox>
+                <paging id="pgClaimHistory" pageSize="20"/>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+</window>

@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="175c2a5f-2229-4ad6-a77c-6f56e422b8fc" name="Default" comment="" />
+    <ignored path="IMCTools.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="IMCTools" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+<<<<<<< HEAD
+      <file leaf-file-name="UploadICDExceptionsController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDExceptionsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.69639796" vertical-offset="1484" max-vertical-offset="2085">
+              <caret line="401" column="62" selection-start="15345" selection-end="15345" />
+              <folding>
+                <element signature="docComment;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#onCreate#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#initComponents#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#populateClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#populateProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#clientSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#productSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#quickSearchClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#refreshClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#quickSearchProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#refreshProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#populate#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#populateProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#clear#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#refineProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#importExceptions#0;class#UploadICDExceptionsController#0" expanded="false" />
+                <element signature="method#validate#0;class#UploadICDExceptionsController#0" expanded="false" />
+              </folding>
+=======
+      <file leaf-file-name="BackdateProductController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/BackdateProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3810" max-vertical-offset="4035">
+              <caret line="254" column="0" selection-start="10546" selection-end="10546" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDetailController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductDetailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6105" max-vertical-offset="9330">
+              <caret line="407" column="56" selection-start="16519" selection-end="16519" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderDetail1Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetail1Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2655" max-vertical-offset="3015">
+              <caret line="177" column="0" selection-start="6981" selection-end="6981" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderDetailController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3555">
+              <caret line="151" column="25" selection-start="5600" selection-end="5600" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixNoDataController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/FixNoDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3840" max-vertical-offset="4170">
+              <caret line="256" column="16" selection-start="11032" selection-end="11032" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteMemberController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/DeleteMemberController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="5370">
+              <caret line="338" column="0" selection-start="13449" selection-end="13449" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/main.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1725">
+              <caret line="56" column="0" selection-start="2895" selection-end="2895" />
+              <folding />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="UploadICDExceptions.zul" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/views/UploadICDExceptions.zul">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1620">
+              <caret line="84" column="51" selection-start="6222" selection-end="6222" />
+=======
+      <file leaf-file-name="ChangeMemberIndexController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ChangeMemberIndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5880" max-vertical-offset="6600">
+              <caret line="392" column="0" selection-start="16410" selection-end="16410" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintExcessLetterController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/PrintExcessLetterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="2985">
+              <caret line="73" column="52" selection-start="2736" selection-end="2736" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalyzeUploadFileController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="6060">
+              <caret line="299" column="13" selection-start="11436" selection-end="11436" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/WebContent/reportgenerator/inactive_members.reportgenerator" />
+        <option value="$PROJECT_DIR$/WebContent/reportgenerator/conversion_members.reportgenerator" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ReceiptListByProvider.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/pojo/BankAccountPOJO.java" />
+        <option value="$PROJECT_DIR$/WebContent/reportgenerator/qa_claim_history.reportgenerator" />
+        <option value="$PROJECT_DIR$/WebContent/reportgenerator/claim_history.reportgenerator" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductsController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/UpdateBenefitDescriptionController.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/EDCDetail.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDetailController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDeploymentController.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/EDCs.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/EDCDeployment.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/pojo/ClaimPOJO.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/ChangeMemberIndex.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/DeleteMember.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/AnalyzeUploadFile.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/MainController.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/WebContent/views/ReportGenerator.zul" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+        <option value="$PROJECT_DIR$/WebContent/views/UploadICD.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/IMCBSEditor.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/IMCBSEditor.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/IMCBSEditorController.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/printExcessLetter.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/PrintExcessLetter.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/ProviderDetail.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/Providers.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProvidersController.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDExceptionsController.java" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ReportGeneratorController.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/WebContent/views/Payment.zul" />
+        <option value="$PROJECT_DIR$/WebContent/views/BackdateProduct.zul" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/tools/WebAppStart.java" />
+        <option value="$PROJECT_DIR$/WebContent/conf/config.properties" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/FixNoDataController.java" />
+        <option value="$PROJECT_DIR$/WebContent/main.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/PrintExcessLetterController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/PaymentController.java" />
+        <option value="$PROJECT_DIR$/WebContent/views/ReportGenerator.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/tools/Libs.java" />
+        <option value="$PROJECT_DIR$/WebContent/index.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ChangeMemberIndexController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/DeleteMemberController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/BackdateProductController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductDetailController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetail1Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetailController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/RenewProductController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDExceptionsController.java" />
+=======
+        <option value="$PROJECT_DIR$/WebContent/index.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/tools/WebAppStart.java" />
+        <option value="$PROJECT_DIR$/WebContent/conf/config.properties" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/tools/Libs.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/RenewProductController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/FixNoDataController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/DeleteMemberController.java" />
+        <option value="$PROJECT_DIR$/WebContent/main.zul" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/BackdateProductController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ChangeMemberIndexController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/PrintExcessLetterController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductDetailController.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetail1Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetailController.java" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="1022" />
+    <option name="y" value="-3" />
+    <option name="width" value="1370" />
+    <option name="height" value="739" />
+=======
+    <option name="x" value="-2" />
+    <option name="y" value="-3" />
+    <option name="width" value="1028" />
+    <option name="height" value="775" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imctools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imctools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imctools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="structures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imctools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IMCTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imctools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../libraries/java/jasperreports/jasperreports-5.1.0.jar!/" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imc.imctools.controllers" />
+      <recent name="com.imc.imctools.tools" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/views" />
+      <recent name="$PROJECT_DIR$/WebContent/resources/reports" />
+      <recent name="$PROJECT_DIR$/WebContent/resources/icons" />
+      <recent name="$PROJECT_DIR$/WebContent/resources/bank_transfer_templates" />
+      <recent name="$PROJECT_DIR$/WebContent/reportgenerator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="175c2a5f-2229-4ad6-a77c-6f56e422b8fc" name="Default" comment="" />
+      <created>1384310336662</created>
+      <updated>1384310336662</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="1022" y="-3" width="1370" height="739" extended-state="6" />
+    <editor active="true" />
+=======
+    <frame x="-2" y="-3" width="1028" height="775" extended-state="6" />
+    <editor active="false" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10876133" sideWeight="0.8135593" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14765784" sideWeight="0.8135593" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4090177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4003021" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3134441" sideWeight="0.8135593" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30448064" sideWeight="0.8135593" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4090177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.123111784" sideWeight="0.8135593" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18357489" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4003021" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27416918" sideWeight="0.8135593" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="copy-lib" isVisible="false" />
+        <filter targetName="compile" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="copy-views" isVisible="false" />
+        <filter targetName="war" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="15" column="83" selection-start="858" selection-end="858" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="555">
+          <caret line="57" column="27" selection-start="2054" selection-end="2054" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCDeployment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="990">
+          <caret line="27" column="79" selection-start="1247" selection-end="1247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.010416667" vertical-offset="1149" max-vertical-offset="1725">
+          <caret line="77" column="0" selection-start="2779" selection-end="2935" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCs.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="576">
+          <caret line="20" column="0" selection-start="979" selection-end="1279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/RenewProduct.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6354167" vertical-offset="399" max-vertical-offset="975">
+          <caret line="51" column="0" selection-start="2134" selection-end="2289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/rules/2014-1-0-51053.rule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27075812" vertical-offset="540" max-vertical-offset="1740">
+          <caret line="46" column="21" selection-start="2248" selection-end="2248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ChangeMemberIndex.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1419" max-vertical-offset="1995">
+          <caret line="123" column="19" selection-start="8130" selection-end="8130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/DeleteMember.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="1890">
+          <caret line="112" column="45" selection-start="7612" selection-end="7612" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProductDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="3270">
+          <caret line="12" column="25" selection-start="665" selection-end="665" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/AnalyzeUploadFile.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <caret line="5" column="103" selection-start="549" selection-end="549" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../libraries/java/apache/poi/poi-3.9-20121203.jar!/org/apache/poi/hssf/usermodel/HSSFCell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6050583" vertical-offset="900" max-vertical-offset="2115">
+          <caret line="6" column="13" selection-start="172" selection-end="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/pojo/ICDPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12733446" vertical-offset="0" max-vertical-offset="589">
+          <caret line="5" column="13" selection-start="87" selection-end="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6354167" vertical-offset="384" max-vertical-offset="960">
+          <caret line="50" column="48" selection-start="1393" selection-end="1429" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="589">
+          <caret line="54" column="41" selection-start="1765" selection-end="1765" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/IMCBSEditor.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078125" vertical-offset="0" max-vertical-offset="576">
+          <caret line="3" column="22" selection-start="323" selection-end="323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/IMCBSEditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5602716" vertical-offset="0" max-vertical-offset="589">
+          <caret line="22" column="30" selection-start="457" selection-end="457" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+          <caret line="0" column="0" selection-start="0" selection-end="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/PrintExcessLetter.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="33" selection-start="33" selection-end="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProviderDetail1.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46875" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="18" column="35" selection-start="971" selection-end="971" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProviderDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+          <caret line="7" column="18" selection-start="708" selection-end="708" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/Providers.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="9" column="42" selection-start="911" selection-end="911" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.107334524" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="4" column="79" selection-start="230" selection-end="230" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/Payment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1410">
+          <caret line="81" column="0" selection-start="5294" selection-end="5294" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/BackdateProduct.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="360" max-vertical-offset="1290">
+          <caret line="0" column="48" selection-start="48" selection-end="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/pojo/BankAccountPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7962648" vertical-offset="986" max-vertical-offset="1575">
+          <caret line="97" column="0" selection-start="1914" selection-end="1914" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="6060">
+          <caret line="299" column="13" selection-start="11436" selection-end="11436" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/UpdateBenefitDescriptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1568" max-vertical-offset="2175">
+          <caret line="148" column="68" selection-start="5163" selection-end="5163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="132" column="0" selection-start="4665" selection-end="5081" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="15" column="83" selection-start="858" selection-end="858" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="555">
+          <caret line="57" column="27" selection-start="2054" selection-end="2054" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDeploymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="630">
+          <caret line="125" column="25" selection-start="4238" selection-end="4238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCDeployment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="990">
+          <caret line="27" column="79" selection-start="1247" selection-end="1247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.010416667" vertical-offset="1149" max-vertical-offset="1725">
+          <caret line="77" column="0" selection-start="2779" selection-end="2935" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/EDCs.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5208333" vertical-offset="0" max-vertical-offset="576">
+          <caret line="20" column="0" selection-start="979" selection-end="1279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/RenewProduct.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6354167" vertical-offset="399" max-vertical-offset="975">
+          <caret line="51" column="0" selection-start="2134" selection-end="2289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/rules/2014-1-0-51053.rule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27075812" vertical-offset="540" max-vertical-offset="1740">
+          <caret line="46" column="21" selection-start="2248" selection-end="2248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ChangeMemberIndex.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1419" max-vertical-offset="1995">
+          <caret line="123" column="19" selection-start="8130" selection-end="8130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/DeleteMember.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="1890">
+          <caret line="112" column="45" selection-start="7612" selection-end="7612" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProductDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="3270">
+          <caret line="12" column="25" selection-start="665" selection-end="665" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/AnalyzeUploadFile.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
+          <caret line="5" column="103" selection-start="549" selection-end="549" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../libraries/java/apache/poi/poi-3.9-20121203.jar!/org/apache/poi/hssf/usermodel/HSSFCell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6050583" vertical-offset="900" max-vertical-offset="2115">
+          <caret line="6" column="13" selection-start="172" selection-end="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/pojo/ICDPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12733446" vertical-offset="0" max-vertical-offset="589">
+          <caret line="5" column="13" selection-start="87" selection-end="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6354167" vertical-offset="384" max-vertical-offset="960">
+          <caret line="50" column="48" selection-start="1393" selection-end="1429" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="589">
+          <caret line="54" column="41" selection-start="1765" selection-end="1765" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/IMCBSEditor.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078125" vertical-offset="0" max-vertical-offset="576">
+          <caret line="3" column="22" selection-start="323" selection-end="323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/IMCBSEditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5602716" vertical-offset="0" max-vertical-offset="589">
+          <caret line="22" column="30" selection-start="457" selection-end="457" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+          <caret line="0" column="0" selection-start="0" selection-end="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/PrintExcessLetter.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="33" selection-start="33" selection-end="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProviderDetail1.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46875" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="18" column="35" selection-start="971" selection-end="971" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ProviderDetail.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
+          <caret line="7" column="18" selection-start="708" selection-end="708" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/Providers.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="9" column="42" selection-start="911" selection-end="911" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProvidersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1845">
+          <caret line="84" column="32" selection-start="3223" selection-end="3223" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ReportGenerator.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="2250">
+          <caret line="45" column="60" selection-start="3268" selection-end="3268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/UploadICDExceptions.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6299484" vertical-offset="489" max-vertical-offset="1620">
+          <caret line="57" column="27" selection-start="4425" selection-end="4425" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ReportGeneratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2505">
+          <caret line="13" column="39" selection-start="453" selection-end="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.107334524" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="4" column="79" selection-start="230" selection-end="230" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/tools/WebAppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="1395">
+          <caret line="26" column="0" selection-start="694" selection-end="694" />
+=======
+    <entry file="file://$PROJECT_DIR$/WebContent/views/Payment.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1410">
+          <caret line="81" column="0" selection-start="5294" selection-end="5294" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/views/BackdateProduct.zul">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="20" column="0" selection-start="439" selection-end="439" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/PrintExcessLetterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="2835">
+          <caret line="73" column="52" selection-start="2736" selection-end="2736" />
+=======
+        <state vertical-scroll-proportion="-0.625" vertical-offset="360" max-vertical-offset="1290">
+          <caret line="0" column="48" selection-start="48" selection-end="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/pojo/BankAccountPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7962648" vertical-offset="986" max-vertical-offset="1575">
+          <caret line="97" column="0" selection-start="1914" selection-end="1914" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/WebContent/main.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75980395" vertical-offset="375" max-vertical-offset="1725">
+          <caret line="56" column="0" selection-start="2895" selection-end="2895" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/tools/Libs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13635" max-vertical-offset="15540">
+          <caret line="909" column="58" selection-start="34174" selection-end="34174" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDExceptionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.109375" vertical-offset="0" max-vertical-offset="1440">
+          <caret line="313" column="0" selection-start="10562" selection-end="11999" />
+          <folding>
+            <element signature="docComment;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#onCreate#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#initComponents#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#clientSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#productSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#quickSearchClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refreshClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#quickSearchProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refreshProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populate#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#clear#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refineProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#validate#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#save#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#saveProcess#0;class#UploadICDExceptionsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="303" max-vertical-offset="990">
+          <caret line="31" column="36" selection-start="1430" selection-end="1430" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/WebContent/views/ReportGenerator.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53104573" vertical-offset="1625" max-vertical-offset="2265">
+          <caret line="130" column="47" selection-start="8819" selection-end="8819" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/tools/WebAppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="1395">
+          <caret line="26" column="0" selection-start="694" selection-end="694" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/WebContent/index.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50980395" vertical-offset="123" max-vertical-offset="990">
+          <caret line="29" column="54" selection-start="1318" selection-end="1318" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ChangeMemberIndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8381295" vertical-offset="5504" max-vertical-offset="6285">
+          <caret line="416" column="0" selection-start="17793" selection-end="17793" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ClientsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="280" max-vertical-offset="1425">
+          <caret line="45" column="25" selection-start="1283" selection-end="1288" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/DeleteMemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27877697" vertical-offset="3880" max-vertical-offset="5085">
+          <caret line="285" column="0" selection-start="10801" selection-end="10801" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/BackdateProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.57976" vertical-offset="0" max-vertical-offset="3735">
+          <caret line="194" column="0" selection-start="7733" selection-end="7733" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="1255" max-vertical-offset="5670">
+          <caret line="122" column="35" selection-start="4802" selection-end="4805" />
+=======
+    <entry file="file://$PROJECT_DIR$/WebContent/conf/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="20" column="0" selection-start="439" selection-end="439" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/tools/Libs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2306" max-vertical-offset="3075">
+          <caret line="950" column="0" selection-start="35684" selection-end="35684" />
+          <folding>
+            <element signature="docComment;class#Libs#0" expanded="false" />
+            <element signature="method#nn#0;class#Libs#0" expanded="false" />
+            <element signature="method#createBooleanListcell#0;class#Libs#0" expanded="false" />
+            <element signature="e#2000#2181#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <element signature="method#createBooleanListcell#1;class#Libs#0" expanded="false" />
+            <element signature="e#2551#2752#0" expanded="true" />
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="method#createProgressListcell#0;class#Libs#0" expanded="false" />
+            <element signature="method#createNumericListcell#0;class#Libs#0" expanded="false" />
+            <element signature="method#createNumericListcell#1;class#Libs#0" expanded="false" />
+            <element signature="method#getDiffDays#0;class#Libs#0" expanded="false" />
+            <element signature="method#createRow#0;class#Libs#0" expanded="false" />
+            <element signature="method#runningFields#0;class#Libs#0" expanded="false" />
+            <element signature="method#runningAddFields#0;class#Libs#0" expanded="false" />
+            <element signature="method#getShortClaimType#0;class#Libs#0" expanded="false" />
+            <element signature="method#getPlanItemPosition#0;class#Libs#0" expanded="false" />
+            <element signature="e#5780#5788#0" expanded="true" />
+            <element signature="e#6833#6841#0" expanded="true" />
+            <element signature="method#getCompanyByPolicyNumber#0;class#Libs#0" expanded="false" />
+            <element signature="method#getClientById#0;class#Libs#0" expanded="false" />
+            <element signature="method#getProviderById#0;class#Libs#0" expanded="false" />
+            <element signature="method#getMemberNameByIndex#0;class#Libs#0" expanded="false" />
+            <element signature="method#getMemberByIndex#0;class#Libs#0" expanded="false" />
+            <element signature="method#getPlanById#0;class#Libs#0" expanded="false" />
+            <element signature="method#getChangePlanById#0;class#Libs#0" expanded="false" />
+            <element signature="method#getBenefitDescriptionMap#0;class#Libs#0" expanded="false" />
+            <element signature="e#16585#16600#0" expanded="true" />
+            <element signature="method#getICDById#0;class#Libs#0" expanded="false" />
+            <element signature="method#getICDGroupById#0;class#Libs#0" expanded="false" />
+            <element signature="e#18196#18205#0" expanded="true" />
+            <element signature="method#getICDByRangeId#0;class#Libs#0" expanded="false" />
+            <element signature="e#19064#19073#0" expanded="true" />
+            <element signature="method#getTotalBenefitsAmount#0;class#Libs#0" expanded="false" />
+            <element signature="method#getTotalBenefitsAmountMinusLI#0;class#Libs#0" expanded="false" />
+            <element signature="method#getTotalBenefitsAmountHistory#0;class#Libs#0" expanded="false" />
+            <element signature="method#getTotalBenefitsAmountHistoryClaimType#0;class#Libs#0" expanded="false" />
+            <element signature="method#getBenefitValues#0;class#Libs#0" expanded="false" />
+            <element signature="method#getBasicSalary#0;class#Libs#0" expanded="false" />
+            <element signature="method#populateMemberFamily#0;class#Libs#0" expanded="false" />
+            <element signature="method#checkICDException#0;class#Libs#0" expanded="false" />
+            <element signature="method#getCellAt#0;class#Libs#0" expanded="false" />
+            <element signature="method#populateCombobox#0;class#Libs#0" expanded="false" />
+            <element signature="method#loadReportGenerator#0;class#Libs#0" expanded="false" />
+            <element signature="method#createCell#0;class#Libs#0" expanded="false" />
+            <element signature="method#createCell#1;class#Libs#0" expanded="false" />
+            <element signature="method#getNumberOfEDC#0;class#Libs#0" expanded="false" />
+            <element signature="method#getEDCUsageCount#0;class#Libs#0" expanded="false" />
+            <element signature="method#getBankAccount#0;class#Libs#0" expanded="false" />
+            <element signature="method#getProviderBankAccount#0;class#Libs#0" expanded="false" />
+            <element signature="method#fixDate#0;class#Libs#0" expanded="false" />
+            <element signature="method#showErrorForm#0;class#Libs#0" expanded="false" />
+            <element signature="method#getUsername#0;class#Libs#0" expanded="false" />
+            <element signature="method#printReport#0;class#Libs#0" expanded="false" />
+            <element signature="method#createInsertString#0;class#Libs#0" expanded="false" />
+            <element signature="method#createCardNumber#0;class#Libs#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/RenewProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4814816" vertical-offset="4190" max-vertical-offset="7875">
+          <caret line="299" column="37" selection-start="18036" selection-end="18036" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/EDCDeploymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="1555" max-vertical-offset="2145">
+          <caret line="130" column="38" selection-start="4608" selection-end="4611" />
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0740743" vertical-offset="1678" max-vertical-offset="7710">
+          <caret line="145" column="33" selection-start="6348" selection-end="6348" />
+          <folding>
+            <element signature="e#13862#13872#0" expanded="true" />
+            <element signature="e#17998#18008#0" expanded="true" />
+          </folding>
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/FixNoDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="925" max-vertical-offset="4035">
+          <caret line="83" column="25" selection-start="3102" selection-end="3107" />
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="3416" max-vertical-offset="4035">
+          <caret line="256" column="16" selection-start="11032" selection-end="11032" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="2710" max-vertical-offset="7710">
+          <caret line="217" column="119" selection-start="10903" selection-end="10906" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/DeleteMemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4473" max-vertical-offset="5130">
+          <caret line="338" column="0" selection-start="13449" selection-end="13449" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="5155" max-vertical-offset="8685">
+          <caret line="385" column="32" selection-start="15648" selection-end="15651" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338" vertical-offset="1255" max-vertical-offset="1875">
+          <caret line="111" column="27" selection-start="4432" selection-end="4435" />
+=======
+    <entry file="file://$PROJECT_DIR$/WebContent/main.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1725">
+          <caret line="56" column="0" selection-start="2895" selection-end="2895" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetail1Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32553956" vertical-offset="2219" max-vertical-offset="2775">
+          <caret line="175" column="0" selection-start="6884" selection-end="6884" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/AnalyzeUploadFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3834" max-vertical-offset="5670">
+          <caret line="299" column="13" selection-start="11436" selection-end="11436" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43345323" vertical-offset="3074" max-vertical-offset="3630">
+          <caret line="221" column="0" selection-start="9786" selection-end="9786" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProvidersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5683453" vertical-offset="1694" max-vertical-offset="2250">
+          <caret line="148" column="22" selection-start="5827" selection-end="5828" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/BackdateProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3473" max-vertical-offset="3795">
+          <caret line="254" column="0" selection-start="10546" selection-end="10546" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ChangeMemberIndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5378" max-vertical-offset="6330">
+          <caret line="392" column="0" selection-start="16410" selection-end="16410" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/RenewProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022298457" vertical-offset="6947" max-vertical-offset="7560">
+          <caret line="472" column="0" selection-start="29809" selection-end="29809" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/PrintExcessLetterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="2835">
+          <caret line="73" column="52" selection-start="2736" selection-end="2736" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ReportGeneratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.7512865" vertical-offset="5447" max-vertical-offset="6030">
+          <caret line="23" column="13" selection-start="651" selection-end="651" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/UpdateBenefitDescriptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65523154" vertical-offset="1568" max-vertical-offset="2175">
+          <caret line="148" column="68" selection-start="5163" selection-end="5163" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProductDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5888" max-vertical-offset="8895">
+          <caret line="407" column="56" selection-start="16519" selection-end="16519" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetail1Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2333" max-vertical-offset="2790">
+          <caret line="177" column="0" selection-start="6981" selection-end="6981" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/WebContent/views/UploadICDExceptions.zul">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1620">
+          <caret line="84" column="51" selection-start="6222" selection-end="6222" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/ProviderDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3555">
+          <caret line="151" column="25" selection-start="5600" selection-end="5600" />
+>>>>>>> a2eb5fbf2c187b006cbc73cb82ee25765590931c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imc/imctools/controllers/UploadICDExceptionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69639796" vertical-offset="1484" max-vertical-offset="2085">
+          <caret line="401" column="62" selection-start="15345" selection-end="15345" />
+          <folding>
+            <element signature="docComment;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#onCreate#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#initComponents#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#clientSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#productSelected#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#quickSearchClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refreshClients#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#quickSearchProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refreshProducts#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populate#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#populateProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#clear#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#refineProductICDs#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#importExceptions#0;class#UploadICDExceptionsController#0" expanded="false" />
+            <element signature="method#validate#0;class#UploadICDExceptionsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>IMCTools</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>commons-beanutils-1.8.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<rule>
+    <section name="benefit">
+        <![CDATA[
+
+boolean unlimited = false;
+boolean specialDisease = false;
+
+double benefitLimit = benefitPOJO.getLimit();
+double proposedDays = iProposedDays.getValue();
+double approvedDays = iApprovedDays.getValue();
+double proposedAmount = dbProposedAmount.getValue();
+double approvedAmount = 0;
+
+double[] result = Libs.getTotalBenefitsAmountMinusLI(lb, li);
+double totalProposedAmount = result[0];
+double totalApprovedAmount = result[1];
+double totalHistoryProposedAmount = previousClaimTotalAmount[0];
+double totalHistoryApprovedAmount = previousClaimTotalAmount[1];
+
+double planLimit = planPOJO.getLimit();
+
+if (benefitLimit==999999999) unlimited = true;
+if (parameters.get("special_disease")!=null && parameters.get("special_disease")) specialDisease = true;
+
+System.out.println(specialDisease + ", " + planPOJO.getPlanCode() + ", " + 1);
+
+/**
+additionalLimitDeductor is a variable that holds the result of total claim (all claim types) minus
+limit of member's plans. The additionalLimitDeductor then will substracted from (75% Basic Salary)
+*/
+
+double additionalLimitDeductor = 0;
+
+double[] totalIPUsage = Libs.getTotalBenefitsAmountHistoryClaimType(memberPOJO, "I");
+double[] totalOPUsage = Libs.getTotalBenefitsAmountHistoryClaimType(memberPOJO, "O");
+double[] totalMTUsage = Libs.getTotalBenefitsAmountHistoryClaimType(memberPOJO, "R");
+double[] totalDTUsage = Libs.getTotalBenefitsAmountHistoryClaimType(memberPOJO, "D");
+double[] totalGLUsage = Libs.getTotalBenefitsAmountHistoryClaimType(memberPOJO, "G");
+
+if (totalIPUsage[1]>memberPOJO.getIp().getLimit()) additionalLimitDeductor += (totalIPUsage[1] - memberPOJO.getIp().getLimit());
+if (totalOPUsage[1]>memberPOJO.getOp().getLimit()) additionalLimitDeductor += (totalOPUsage[1] - memberPOJO.getOp().getLimit());
+if (totalMTUsage[1]>memberPOJO.getMt().getLimit()) additionalLimitDeductor += (totalMTUsage[1] - memberPOJO.getMt().getLimit());
+if (totalDTUsage[1]>memberPOJO.getDt().getLimit()) additionalLimitDeductor += (totalDTUsage[1] - memberPOJO.getDt().getLimit());
+if (totalGLUsage[1]>memberPOJO.getGl().getLimit()) additionalLimitDeductor += (totalGLUsage[1] - memberPOJO.getGl().getLimit());
+
+System.out.println(totalIPUsage[1] + ", " + totalOPUsage[1] + ", " + totalMTUsage[1] + ", " + totalDTUsage[1] + ", " + totalGLUsage[1]);
+System.out.println(additionalLimitDeductor);
+
+if (specialDisease) {
+    String group1_4 = "C0300, CB300, C0412, CB412, C0850, CB850, C0100, CB100, A0525, A0750, A0118, A0125";
+    String group5_6 = "C0120, CB120, C0160, CB160, A0001, A0002";
+
+    if (group1_4.contains(planPOJO.getPlanCode())) planLimit += (((memberPOJO.getBasicSalary()/100)*75) - additionalLimitDeductor);
+    if (group5_6.contains(planPOJO.getPlanCode())) planLimit += ((((memberPOJO.getBasicSalary()/100)*75) + (3*memberPOJO.getBasicSalary())) - additionalLimitDeductor);
+}
+
+/**
+Check benefit limit
+*/
+
+if (!unlimited) {
+    if (proposedAmount>(benefitLimit*approvedDays)) {
+        approvedAmount = benefitLimit*approvedDays;
+    } else {
+        approvedAmount = proposedAmount;
+    }
+} else {
+    approvedAmount = proposedAmount;
+}
+
+/**
+Check for Plan Rule
+*/
+
+if (planPOJO.getPlanCode().toLowerCase().startsWith("cb")) {
+    if (benefitPOJO.getBenefitCode().equals("IN032") || benefitPOJO.getBenefitCode().equals("IN042")) {
+        double[] in219Values = Libs.getBenefitValues(lb, "IN219");
+        double[] in214Values = Libs.getBenefitValues(lb, "IN214");
+        double[] in216Values = Libs.getBenefitValues(lb, "IN216");
+        double[] in217Values = Libs.getBenefitValues(lb, "IN217");
+
+        System.out.println(in219Values[1] + ", " + in214Values[1] + ", " + in216Values[1] + ", " + in217Values[1]);
+
+        if (in219Values[1]!=0) approvedAmount = (in219Values[1] / 100) * 40;
+        if (in214Values[1]!=0) approvedAmount = (in214Values[1] / 100) * 40;
+        if (in216Values[1]!=0) approvedAmount = (in216Values[1] / 100) * 40;
+        if (in217Values[1]!=0) approvedAmount = (in217Values[1] / 100) * 40;
+    }
+}
+
+/**
+Check against plan limit
+*/
+
+if (totalHistoryApprovedAmount + totalApprovedAmount + approvedAmount > planLimit) {
+    approvedAmount = planLimit - totalHistoryApprovedAmount - totalApprovedAmount;
+}
+
+/**
+Put approved amount
+*/
+
+if (approvedAmount<0) approvedAmount = 0;
+iApprovedDays.setValue(approvedDays);
+dbApprovedAmount.setValue(approvedAmount);
+
+        ]]>
+    </section>
+</rule>

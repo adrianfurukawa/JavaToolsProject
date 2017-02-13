@@ -1,0 +1,101 @@
+<window border="normal" width="700px" height="400px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.AnalyzeUploadFileController">
+    <caption label="Analyze Upload File" image="resources/icons/tools.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Analyze" onClick="spaceOwner.analyze();"/>
+            <toolbarbutton image="resources/icons/save.png" tooltiptext="Save" onClick="spaceOwner.save();"/>
+        </toolbar>
+        <panelchildren>
+            <borderlayout width="100%" height="100%">
+                <north size="75px" style="border:0px;">
+                    <grid width="100%" height="100%" style="border:0px;">
+                        <columns visible="false">
+                            <column width="150px"/>
+                            <column/>
+                        </columns>
+                        <rows>
+                            <row>
+                                Product
+                                <bandbox id="bbProduct" hflex="true" readonly="true">
+                                    <bandpopup width="500px" height="400px">
+                                        <panel width="100%" height="100%">
+                                            <panelchildren>
+                                                <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                                                    <toolbar height="21px">
+                                                        <toolbarbutton image="resources/icons/accept.png" tooltiptext="OK" onClick="spaceOwner.productSelected();"/>
+                                                    </toolbar>
+                                                    <toolbar align="end" height="21px">
+                                                        <image src="resources/icons/browse.png"/>
+                                                        <textbox id="tQuickSearchProducts" onOK="spaceOwner.quickSearchProducts();"/>
+                                                    </toolbar>
+                                                </hbox>
+                                                <listbox id="lbProducts" width="100%" height="100%" vflex="true" style="white-space:nowrap; border-top:0px;" onDoubleClick="spaceOwner.productSelected();">
+                                                    <listhead sizable="true">
+                                                        <listheader label="Year" width="70px"/>
+                                                        <listheader label="Product Number" width="110px"/>
+                                                        <listheader label="Name"/>
+                                                    </listhead>
+                                                </listbox>
+                                                <paging id="pgProducts" pageSize="20"/>
+                                            </panelchildren>
+                                        </panel>
+                                    </bandpopup>
+                                </bandbox>
+                            </row>
+                            <row>
+                                Upload File
+                                <hlayout>
+                                    <button label="Select File" upload="true" onUpload="spaceOwner.fileUploaded(event);"/>
+                                    <space width="5px"/>
+                                    <label id="lFilename"/>
+                                </hlayout>
+                            </row>
+                        </rows>
+                    </grid>
+                </north>
+                <center style="padding:5px; border:0px;">
+                    <tabbox width="100%" height="100%">
+                        <tabs>
+                            <tab label="Missing"/>
+                            <tab label="Mismatch Data"/>
+                            <tab label="Structure Inconsistency"/>
+                        </tabs>
+                        <tabpanels>
+                            <tabpanel style="padding:0px;">
+                                <listbox id="lbMissing" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="80px"/>
+                                        <listheader label="Sequence" width="70px"/>
+                                        <listheader label="Name"/>
+                                    </listhead>
+                                </listbox>
+                            </tabpanel>
+                            <tabpanel style="padding:0px;">
+                                <listbox id="lbMismatch" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="80px"/>
+                                        <listheader label="Sequence" width="70px"/>
+                                        <listheader label="Name" width="200px"/>
+                                        <listheader label="Difference" width="100px"/>
+                                        <listheader label="DB" width="200px"/>
+                                        <listheader label="File" width="200px"/>
+                                    </listhead>
+                                </listbox>
+                            </tabpanel>
+                            <tabpanel style="padding:0px;">
+                                <listbox id="lbInconsistency" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px">
+                                    <listhead sizable="true">
+                                        <listheader label="Index" width="80px"/>
+                                        <listheader label="Sequence" width="70px"/>
+                                        <listheader label="Name" width="200px"/>
+                                        <listheader label="Inconsistency" width="200px"/>
+                                    </listhead>
+                                </listbox>
+                            </tabpanel>
+                        </tabpanels>
+                    </tabbox>
+                </center>
+            </borderlayout>
+        </panelchildren>
+    </panel>
+</window>

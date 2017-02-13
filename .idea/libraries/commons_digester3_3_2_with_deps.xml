@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="commons-digester3-3.2-with-deps">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../libraries/java/apache/digester/commons-digester3-3.2-with-deps.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

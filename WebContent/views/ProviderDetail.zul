@@ -1,0 +1,126 @@
+<window border="normal" width="800px" height="420px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ProviderDetailController">
+    <caption label="Provider Detail" image="resources/icons/provider.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="/resources/icons/save.png" tooltiptext="Save" onClick="spaceOwner.save();"/>
+            <toolbarbutton image="/resources/icons/new.png" tooltiptext="New" onClick="spaceOwner.newProvider();"/>
+            <!--<toolbarbutton id="tbnDelete" image="/resources/icons/delete.png" tooltiptext="Delete" onClick="spaceOwner.delete();"/>-->
+        </toolbar>
+        <panelchildren style="padding:2px;">
+            <tabbox width="100%" height="100%">
+                <tabs>
+                    <tab label="Information"/>
+                    <tab label="Phone &amp; Contact"/>
+                </tabs>
+                <tabpanels>
+                    <tabpanel style="padding:0px;">
+                        <grid width="100%" height="100%" hflex="true" vflex="true" style="border:0px;">
+                            <columns visible="false">
+                                <column width="150px"/>
+                                <column/>
+                            </columns>
+                            <rows>
+                                <row>
+                                    Provider Type
+                                    <combobox id="cbProviderType" width="100px" readonly="true">
+                                        <attribute name="onCreate">
+                                            self.setSelectedIndex(0);
+                                        </attribute>
+                                        <comboitem label="RS"/>
+                                    </combobox>
+                                </row>
+                                <row>
+                                    Provider ID
+                                    <intbox id="iProviderId" maxlength="7" width="80px"/>
+                                </row>
+                                <row>
+                                    Provider Name
+                                    <textbox id="tProviderName" maxlength="50" width="350px"/>
+                                </row>
+                            </rows>
+                        </grid>
+                    </tabpanel>
+                    <tabpanel style="padding:0px;">
+                        <grid width="100%" height="100%" hflex="true" vflex="true" style="border:0px;">
+                            <columns visible="false">
+                                <column width="180px"/>
+                                <column/>
+                            </columns>
+                            <rows>
+                                <row>
+                                    Address 1
+                                    <hlayout>
+                                        <textbox id="tAddress1" maxlength="30" width="230px"/>
+                                        <space width="5px"/>
+                                        (Building/Complex, Street Name)
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Address 2
+                                    <hlayout>
+                                        <textbox id="tAddress2" maxlength="30" width="230px"/>
+                                        <space width="5px"/>
+                                        (Street Name/District, Region)
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Address 3
+                                    <hlayout>
+                                        <textbox id="tAddress3" maxlength="30" width="230px"/>
+                                        <space width="5px"/>
+                                        (Province, Zip Code)
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Phone 1
+                                    <hlayout>
+                                        <textbox id="tPhoneArea1" maxlength="4" width="30px"/>-
+                                        <textbox id="tPhone1" maxlength="12" width="100px"/>
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Phone 2
+                                    <hlayout>
+                                        <textbox id="tPhoneArea2" maxlength="4" width="30px"/>-
+                                        <textbox id="tPhone2" maxlength="12" width="100px"/>
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Phone 3
+                                    <hlayout>
+                                        <textbox id="tPhoneArea3" maxlength="4" width="30px"/>-
+                                        <textbox id="tPhone3" maxlength="12" width="100px"/>
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Contact Person 1 &amp; Position
+                                    <hlayout>
+                                        <textbox id="tContactPerson1" maxlength="30" width="230px"/>
+                                        <space width="2px"/>
+                                        <textbox id="tPosition1" maxlength="30" width="230px"/>
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Contact Person 2 &amp; Position
+                                    <hlayout>
+                                        <textbox id="tContactPerson2" maxlength="30" width="230px"/>
+                                        <space width="2px"/>
+                                        <textbox id="tPosition2" maxlength="30" width="230px"/>
+                                    </hlayout>
+                                </row>
+                                <row>
+                                    Contact Person 3 &amp; Position
+                                    <hlayout>
+                                        <textbox id="tContactPerson3" maxlength="30" width="230px"/>
+                                        <space width="2px"/>
+                                        <textbox id="tPosition3" maxlength="30" width="230px"/>
+                                    </hlayout>
+                                </row>
+                            </rows>
+                        </grid>
+                    </tabpanel>
+                </tabpanels>
+            </tabbox>
+        </panelchildren>
+    </panel>
+</window>

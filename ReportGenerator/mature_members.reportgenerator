@@ -1,0 +1,153 @@
+/**
+    tiMembers
+    Mature Members
+    Status: Production
+*/
+
+import com.imc.imctools.tools.Libs;
+import java.util.*;
+import java.io.*;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.hibernate.Session;
+import java.text.SimpleDateFormat;
+
+String[] columns = new String[] {
+                "INSURANCE ID",
+                "POLICY YEAR",
+                "POLICY NUMBER",
+                "COMPANY NAME",
+                "INDEX",
+                "SEQ",
+                "NAME",
+                "SEX",
+                "MARITAL STATUS",
+                "BATE",
+                "SDATE",
+                "EDATE",
+                "LABEL",
+                "OCCUPATION",
+                "IPPLAN",
+                "OPPLAN",
+                "MTPLAN",
+                "DTPLAN",
+                "GLPLAN",
+                "OTPLAN",
+                "CARD NUMBER",
+                "POLCLIENT",
+                "IDCLIENT",
+                "STATUS",
+                "MEMO 1",
+                "MEMO 2",
+                "MEMO 3",
+                "MEMO 4",
+                "MEMO 5",
+                "MEMO 6",
+                "MEMO 7",
+                "MEMO 8",
+                "MEMO 9",
+                "MEMO 10",
+                "ADDITION DATE",
+                "MODIFICATION DATE",
+                "EFFECTIVE DATE",
+                "NIK",
+                "CTR" };
+
+String qry = "select "
+        + "HHDRINSID as INSURANCE_ID, HDT1YY as POLICY_YEAR, HDT1PONO as POLICY_NUMBER, "
+        + "HHDRNAME as COMPANY_NAME, HDT1IDXNO as 'INDEX', HDT1SEQNO as SEQ, HDT1NAME as NAME, HDT1SEX as SEX, "
+        + "HDT1MSTAT as MARITAL_STATUS, "
+        + "convert(varchar, HDT1BDTYY) + '-' + convert(varchar, HDT1BDTMM) + '-' + convert(varchar, HDT1BDTDD) as BDATE, "
+        + "convert(varchar, HDT2SDTYY) + '-' + convert(varchar, HDT2SDTMM) + '-' + convert(varchar, HDT2SDTDD) as SDATE, "
+        + "convert(varchar, HDT2MDTYY) + '-' + convert(varchar, HDT2MDTMM) + '-' + convert(varchar, HDT2MDTDD) as EDATE, "
+        + "HDT1CODE as LABEL, HDT1OCCU as OCCUPATION, "
+        + "HDT2PLAN1 as IPPLAN, HDT2PLAN2 as OPPLAN, HDT2PLAN3 as MTPLAN, HDT2PLAN4 as DTPLAN, "
+        + "HDT2PLAN5 as GLPLAN, HDT2PLAN6 as OTPLAN, HDT1NCARD as CARD_NUMBER, d.HEMPCNPOL as POLCLIENT, d.HEMPCNID as IDCLIENT, "
+        + "HDT2MOE as STATUS, "
+        + "HMEM1DATA1, HMEM1DATA2, HMEM1DATA3, HMEM1DATA4, HMEM1DATA5, HMEM1DATA6, HMEM1DATA7, HMEM1DATA8, HMEM1DATA9, HMEM1DATA0, "
+        + "(convert(varchar,HDT2ADTYY) + '-' + convert(varchar,HDT2ADTMM) + '-' + convert(varchar,HDT2ADTDD)) as ADDITION_DATE, "
+        + "(convert(varchar,HDT2UPDYY) + '-' + convert(varchar,HDT2UPDMM) + '-' + convert(varchar,HDT2UPDDD)) as MODIFICATION_DATE, "
+        + "(convert(varchar,HDT2EDTYY) + '-' + convert(varchar,HDT2EDTMM) + '-' + convert(varchar,HDT2EDTDD)) as EFFECTIVE_DATE, "
+        + "HEMPMEMO3 as NIK, "
+        + "a.HDT1CTR as CTR "
+        + "from IDNHLTPF.dbo.HLTDT1 a "
+        + "inner join IDNHLTPF.dbo.HLTHDR b "
+        + "on a.HDT1YY=b.HHDRYY "
+        + "and a.HDT1BR=b.HHDRBR "
+        + "and a.HDT1DIST=b.HHDRDIST "
+        + "and a.HDT1PONO=b.HHDRPONO "
+        + "inner join IDNHLTPF.dbo.HLTDT2 c "
+        + "on c.HDT2YY=b.HHDRYY "
+        + "and c.HDT2BR=b.HHDRBR and c.HDT2DIST=b.HHDRDIST "
+        + "and c.HDT2PONO=b.HHDRPONO and c.HDT2IDXNO=a.HDT1IDXNO "
+        + "and c.HDT2SEQNO=a.HDT1SEQNO "
+        + "and c.HDT2CTR=a.HDT1CTR "
+        + "inner join IDNHLTPF.dbo.HLTEMP d "
+        + "on a.HDT1YY=d.HEMPYY "
+        + "and a.HDT1BR=d.HEMPBR "
+        + "and a.HDT1DIST=d.HEMPDIST "
+        + "and a.HDT1PONO=d.HEMPPONO "
+        + "and a.HDT1IDXNO=d.HEMPIDXNO "
+        + "and a.HDT1SEQNO=d.HEMPSEQNO "
+        + "and a.HDT1CTR=d.HEMPCTR "
+        + "left outer join idnhltpf.dbo.hltmemo1 e "
+        + "on a.HDT1YY=e.HMEM1YY "
+        + "and a.HDT1BR=e.HMEM1BR "
+        + "and a.HDT1DIST=e.HMEM1DIST "
+        + "and a.HDT1PONO=e.HMEM1PONO "
+        + "and a.HDT1IDXNO=e.HMEM1IDXNO "
+        + "and a.HDT1SEQNO=e.HMEM1SEQNO "
+        + "and a.HDT1CTR=e.HMEM1CTR "
+        + "where "
+        + "a.hdt1idxno not in (99998, 99999) "
+        + "and a.hdt1ctr=0 "
+        + "and c.hdt2moe='M' "
+        + "and a.hdt1yy=" + productPOJO.getProductYear() + " "
+        + "and a.hdt1pono=" + productPOJO.getProductId() + " ";
+
+Session s = Libs.sfDB.openSession();
+try {
+    List l = s.createSQLQuery(qry).list();
+
+    Workbook wb = new HSSFWorkbook();
+    Sheet sheet = wb.createSheet("Mature Members");
+    sheet.createFreezePane(0, 1, 0, 1);
+    int cnt = 0;
+
+    org.apache.poi.ss.usermodel.Row row = sheet.createRow(cnt);
+
+    for (int i=0; i<columns.length; i++) {
+        Libs.createCell(row, i, columns[i]);
+    }
+
+    cnt++;
+
+    for (Object[] o : l) {
+        row = sheet.createRow(cnt);
+
+        for (int i=0; i<o.length; i++) {
+            if (i>=9 && i<=11) {
+				try {
+					Libs.createCell(row, i, new SimpleDateFormat("yyyyMMdd").format(new SimpleDateFormat("yyyy-MM-dd").parse(Libs.nn(o[i]))));
+				} catch (Exception ex) {
+					Libs.createCell(row, i, o[i]);
+					log.error("mature_members", ex);
+				}
+			} else {
+				Libs.createCell(row, i, o[i]);
+			}
+        }
+
+        cnt++;
+    }
+
+    FileOutputStream out = new FileOutputStream(reportPOJO.getFile());
+    wb.write(out);
+    out.close();
+    reportPOJO.setName(productPOJO.getProductYear() + "-" + productPOJO.getProductId() + "-Mature Members-" + new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + ".xls");
+} catch (Exception ex) {
+    log.error("mature_members.reportgenerator", ex);
+} finally {
+    if (s!=null && s.isOpen()) s.close();
+}

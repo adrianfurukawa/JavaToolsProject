@@ -1,0 +1,24 @@
+<window border="normal" width="600px" height="520px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.ClientsController">
+    <caption label="Clients" image="resources/icons/client.png"/>
+    <panel width="100%" height="100%">
+        <panelchildren>
+            <hbox pack="stretch" sclass="hboxRemoveWhiteStrips" width="100%">
+                <toolbar height="21px">
+                    <toolbarbutton image="resources/icons/refresh.png" tooltiptext="Refresh" onClick="spaceOwner.refresh();"/>
+                </toolbar>
+                <toolbar align="end" height="21px">
+                    <image src="resources/icons/browse.png"/>
+                    <textbox id="tQuickSearch" onOK="spaceOwner.quickSearch();"/>
+                </toolbar>
+            </hbox>
+            <listbox id="lb" width="100%" height="100%" vflex="true" style="white-space:nowrap;border:0px" onDoubleClick="spaceOwner.clientSelected();">
+                <listhead>
+                    <listheader label="Client ID" width="80px"/>
+                    <listheader label="Name"/>
+                    <listheader label="Type" width="120px"/>
+                </listhead>
+            </listbox>
+            <paging id="pg" pageSize="50"/>
+        </panelchildren>
+    </panel>
+</window>

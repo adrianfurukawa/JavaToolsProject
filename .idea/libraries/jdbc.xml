@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdbc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../libraries/java/jdbc/mssql/jtds-1.2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../libraries/java/jdbc/db2/jtopen_7_10_jdbc40_jdk6/lib/jt400.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

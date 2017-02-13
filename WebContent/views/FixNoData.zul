@@ -1,0 +1,28 @@
+<window border="normal" width="300px" height="155px" position="center" closable="true" sizable="true" contentStyle="padding:0px;" use="com.imc.imctools.controllers.FixNoDataController">
+    <caption label="Fix No Data" image="resources/icons/tools.png"/>
+    <panel width="100%" height="100%">
+        <toolbar>
+            <toolbarbutton image="resources/icons/accept.png" tooltiptext="Ok" onClick="spaceOwner.fixNoData();"/>
+        </toolbar>
+        <panelchildren style="padding:5px;">
+            <vlayout width="100%" height="100%">
+                <groupbox>
+                    This tool will help you fix No Data error when
+                    printing Lembar Analisa
+                </groupbox>
+                <grid hflex="true">
+                    <columns visible="false">
+                        <column width="120px"/>
+                        <column/>
+                    </columns>
+                    <rows>
+                        <row>
+                            Claim Number
+                            <textbox id="tClaimNumber" hflex="true" onOK="spaceOwner.fixNoData();"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vlayout>
+        </panelchildren>
+    </panel>
+</window>
